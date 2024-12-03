@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -8,5 +9,5 @@ export default defineConfig({
   },
   // Add your domain name here
   site: "https://lexingtonthemes.com/",
-  integrations: [ sitemap()]
+  integrations: [sitemap(), react()]
 });

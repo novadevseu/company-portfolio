@@ -3,6 +3,16 @@
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-scrollbar-hide";
 
+@theme {
+  /* Your CSS goes here, see how styles are written on the global.css file */
+  --color-primary: rgb(53, 89, 149); /* Primary color for main elements like buttons and headers */
+  --color-secondary: rgb(41, 59, 92); /* Secondary color for subtitles or complementary elements */
+  --color-background: rgb(29, 29, 35); /* Background color for the main layout */
+  --color-accent: rgb(149, 154, 159); /* Accent color for borders, highlights, or subtle details */
+  --color-muted: rgb(66, 72, 82); /* Muted color for hover effects or less prominent areas */
+  --color-highlight: rgb(22, 34, 54); /* Highlight color for deep backgrounds or focal elements */
+}
+
 :root {
   font-family: Inter, sans-serif;
 }
@@ -12,20 +22,4 @@
   :root {
     font-family: InterVariable, sans-serif;
   }
-}
-
-:root {
-  --color-primary: rgb(53, 89, 149); /* Primary color for main elements like buttons and headers */
-  --color-secondary: rgb(41, 59, 92); /* Secondary color for subtitles or complementary elements */
-  --color-background: rgb(29, 29, 35); /* Background color for the main layout */
-  --color-accent: rgb(149, 154, 159); /* Accent color for borders, highlights, or subtle details */
-  --color-muted: rgb(66, 72, 82); /* Muted color for hover effects or less prominent areas */
-  --color-highlight: rgb(22, 34, 54); /* Highlight color for deep backgrounds or focal elements */
-
-  /*Example on to how to use the variables with Tailwind css
-
-  <p class = "text-[var(--color-primary)]">1  Spots available</p>
-
-  The text should now be a nice blue color */  
-  
 }

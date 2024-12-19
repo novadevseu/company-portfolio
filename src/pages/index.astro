@@ -1,15 +1,14 @@
 ---
 import BaseLayout from "@/data/BaseLayout.astro";
 import Services from "@/components/landing/Services.astro";
-import Team from "@/components/landing/Team.astro";
+import Team from "@/components/landing/Team";
 import Proyects from "@/components/landing/Proyects.astro";
 import About from "@/components/landing/About.astro";
 import Contact from "@/components/landing/Contact.astro";
 ---
 <BaseLayout>
   <About />
-  <Services />
-  <Team />
+  <Team client:load />
   <Proyects />
   <Contact />
 </BaseLayout>

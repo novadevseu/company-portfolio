@@ -4,15 +4,17 @@ import Navigation from "@/components/global/Navigation.astro"
 import Footer from "@/components/global/Footer.astro"
 ---
 
-<html lang="en" class="scroll-smooth selection:bg-black selection:text-white">
+<html lang="en" class="scroll-smooth selection:bg-[var(--color-accent)] selection:text-[var(--color-secondary-background)]">
   <head>
     <BaseHead />
   </head>
-  <body class="bg-[var(--color-background)] flex flex-col min-h-screen mx-auto 2xl:max-w-screen-xl relative">
+  <body class="bg-[var(--color-background)] flex flex-col min-h-screen mx-auto 2xl:max-w-screen-xl relative text-[var(--color-muted)]">
 
-    <Navigation/>
-    <main class="flex-grow"><slot /></main>
-    <Footer/>
+    <Navigation />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
 
   </body>
 </html>

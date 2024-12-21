@@ -1,0 +1,158 @@
+<section id="faq" class="py-20 bg-[var(--color-background)] text-[var(--color-muted)]">
+  <div class="px-8 md:px-12 max-w-5xl mx-auto">
+    <!-- Título -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-[var(--color-primary)]">Frequently Asked Questions</h2>
+      <p class="text-lg">
+        Explore common questions about how we work and communicate with clients.
+      </p>
+    </div>
+
+    <!-- Preguntas Frecuentes -->
+    <div x-data="{ selected: null }">
+      <ul class="list-none bg-white rounded-3xl shadow-lg divide-y divide-gray-200">
+        <!-- Pregunta 1 -->
+        <li class="relative">
+          <button
+            class="w-full p-6 text-left focus:outline-none"
+            @click="selected !== 1 ? selected = 1 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <p class="text-lg font-semibold text-[var(--color-primary)]">
+                How can I work with Nova Devs?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 transition-transform"
+                :class="selected === 1 ? 'rotate-180' : 'rotate-0'"
+              >
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all max-h-0"
+            :class="selected === 1 ? 'max-h-96' : ''"
+            x-ref="container1"
+            style="transition-duration: 300ms;"
+          >
+            <div class="p-6 pt-0">
+              We work exclusively through <a
+                href="https://www.upwork.com/agencies/1864021705604676426/"
+                class="!text-green-500 underline hover:!text-green-600 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Upwork</a>, ensuring secure contracts and transparent collaborations.
+            </div>
+          </div>
+        </li>
+
+        <!-- Pregunta 2 -->
+        <li class="relative">
+          <button
+            class="w-full p-6 text-left focus:outline-none"
+            @click="selected !== 2 ? selected = 2 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <p class="text-lg font-semibold text-[var(--color-primary)]">
+                Can I communicate with you in my language?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 transition-transform"
+                :class="selected === 2 ? 'rotate-180' : 'rotate-0'"
+              >
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all max-h-0"
+            :class="selected === 2 ? 'max-h-96' : ''"
+            x-ref="container2"
+            style="transition-duration: 300ms;"
+          >
+            <div class="p-6 pt-0">
+              Absolutely! Our team can communicate fluently in Spanish, English, Croatian, and Turkish, ensuring seamless collaboration regardless of your language.
+            </div>
+          </div>
+        </li>
+
+        <!-- Pregunta 3 -->
+        <li class="relative">
+          <button
+            class="w-full p-6 text-left focus:outline-none"
+            @click="selected !== 3 ? selected = 3 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <p class="text-lg font-semibold text-[var(--color-primary)]">
+                What should I prepare before starting a project?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 transition-transform"
+                :class="selected === 3 ? 'rotate-180' : 'rotate-0'"
+              >
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all max-h-0"
+            :class="selected === 3 ? 'max-h-96' : ''"
+            x-ref="container3"
+            style="transition-duration: 300ms;"
+          >
+            <div class="p-6 pt-0">
+              You don’t need anything specific, as we handle everything. However, having initial requirements or designs ready can help accelerate the process.
+            </div>
+          </div>
+        </li>
+
+        <!-- Pregunta 4 -->
+        <li class="relative">
+          <button
+            class="w-full p-6 text-left focus:outline-none"
+            @click="selected !== 4 ? selected = 4 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <p class="text-lg font-semibold text-[var(--color-primary)]">
+                Can I join your team?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 transition-transform"
+                :class="selected === 4 ? 'rotate-180' : 'rotate-0'"
+              >
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all max-h-0"
+            :class="selected === 4 ? 'max-h-96' : ''"
+            x-ref="container4"
+            style="transition-duration: 300ms;"
+          >
+            <div class="p-6 pt-0">
+              Yes! We are always looking for talented individuals. Contact us via <a
+                href="https://www.linkedin.com/company/nova-devs-eu/"
+                class="!text-blue-600 underline hover:!text-blue-800 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >LinkedIn</a> to explore opportunities.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

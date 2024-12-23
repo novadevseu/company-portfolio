@@ -1,5 +1,5 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 // https://astro.build/config
@@ -8,6 +8,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   // Add your domain name here
-  site: "https://nova-devs.vercel.app",
-  integrations: [sitemap(), react()]
+  // Base del proyecto
+  base: "/company-portfolio/",
+
+  // Configuración para generar un sitio estático
+  output: "static",
+  integrations: [sitemap(), react()],
 });

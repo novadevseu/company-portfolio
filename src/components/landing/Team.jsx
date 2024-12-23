@@ -9,7 +9,9 @@ const Team = () => {
   };
 
   return (
-    <section id='team' className="overflow-hidden relative h-165 ">
+
+    <section className="overflow-hidden relative " id ="team">
+
       <div className="px-8 md:px-12 max-w-7xl mx-auto">
         {/* Título con mayor separación */}
         <div className= "mb-10">

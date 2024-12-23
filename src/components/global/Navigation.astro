@@ -3,71 +3,106 @@
     <div class="w-full mx-auto">
       <div
         x-data="{ open: false }"
-        class="relative flex flex-col w-full p-3 mx-auto bg-white ring-1 uppercase ring-zinc-200 backdrop-blur-xl backdrop-filter rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row"
+        class="relative flex flex-col w-full p-3 mx-auto bg-[var(--color-highlight)] ring-1 uppercase ring-[var(--color-primary)] backdrop-blur-xl backdrop-filter rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row shadow-lg"
       >
+        <!-- Logo -->
         <div
           class="flex flex-row items-center justify-between md:justify-start"
         >
           <a
-            class="text-[var(--color-primary)] hover:text-black/50 gap-4 items-center tracking-tighter inline-flex font-bold ml-2 text-xl"
-            href="/" title="linke to main page"
+            class="text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors duration-200 gap-4 items-center tracking-tighter inline-flex font-bold ml-2 text-xl"
+            href="/"
+            title="link back to main page"
           >
-           Nova Devs
-          </a><button
+            Nova Devs
+          </a>
+          <button
             @click="open = !open"
-            class="inline-flex items-center justify-center p-2 text-zinc-400 hover:text-cyan-300 focus:outline-none focus:text-black md:hidden"
-            ><svg
+            class="inline-flex items-center justify-center p-2 text-[var(--color-muted)] hover:text-[var(--color-primary)] focus:outline-none md:hidden"
+          >
+            <svg
               class="w-6 h-6"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
-              ><path
+            >
+              <path
                 :class="{'hidden': open, 'inline-flex': !open }"
                 class="inline-flex"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path><path
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+              <path
                 :class="{'hidden': !open, 'inline-flex': open }"
                 class="hidden"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"></path></svg
-            ></button
-          >
-        </div><nav
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav
           :class="{'flex': open, 'hidden': !open}"
           class="flex-col flex-grow hidden py-12 md:py-0 md:flex md:items-end justify-center md:flex-row"
         >
           <ul
-            class="space-y-2 list-none text-xs text-zinc-500 md:space-y-0 md:ml-auto items-center md:inline-flex justify-center text-center md:text-left gap-3"
+            class="space-y-2 list-none text-xs text-[var(--color-muted)] md:space-y-0 md:ml-auto items-center md:inline-flex justify-center text-center md:text-left gap-3"
           >
             <li>
               <a
-                href="https://lexingtonthemes.com/"
-                class="hover:text-black shrink-0"
+                href="#about"
+                class="hover:text-[var(--color-accent)] transition-colors duration-200 shrink-0 font-semibold"
               >
-                Astro Themes</a
+                About</a
               >
             </li>
+            
             <li>
-              <a href="#work" class="hover:text-black shrink-0"> Work</a>
-            </li>
-            <li>
-              <a href="#how" class="hover:text-black shrink-0"> How it works</a>
-            </li>
-            <li>
-              <a href="#pricing" class="hover:text-black shrink-0"> Plans</a>
-            </li><li>
-              <a href="#faq" class="hover:text-black shrink-0"> Faq</a>
-            </li><li class="shrink-0">
               <a
-                href="https://github.com/michael-andreuzza/minimalstudio"
-                class="py-2 w-auto px-4 border-2 h-8 focus:ring-2 rounded-full border-black bg-black/5 hover:bg-transparent text-black duration-200 focus:ring-offset-2 hover:text-black inline-flex items-center justify-center ring-2 focus:ring-black ring-transparent"
+                href="#team"
+                class="hover:text-[var(--color-accent)] transition-colors duration-200 shrink-0 font-semibold"
               >
-                GitHub</a
+                Team</a
               >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="hover:text-[var(--color-accent)] transition-colors duration-200 shrink-0 font-semibold"
+              >
+                Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#faq"
+                class="hover:text-[var(--color-accent)] transition-colors duration-200 shrink-0 font-semibold"
+              >
+                FAQ</a
+              >
+            </li>
+            
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-[var(--color-accent)] transition-colors duration-200 shrink-0 font-semibold"
+              >
+                Contact</a
+              >
+            </li>
+            <li class="shrink-0">
+              <a href="https://github.com/novadevseu">
+              <button
+                class="py-2 w-auto px-4 border-2 h-8 focus:ring-2 rounded-full border-[var(--color-white)] bg-[var(--color-white)] hover:bg-[var(--color-primary)] hover:border-[var(--color-primary)] text-black transition-colors duration-200 focus:ring-offset-2 inline-flex items-center justify-center"
+              >
+                GitHub
+                </button></a>
             </li>
           </ul>
         </nav>

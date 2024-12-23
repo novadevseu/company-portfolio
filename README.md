@@ -1,66 +1,74 @@
-# Astro & Tailwind CSS Starter Kit
+# Nova Devs - Web Development Platform
+
+## About
+
+Nova Devs is a multicultural team specializing in custom web and cross-platform application development. Our focus is on delivering tailored solutions to international clients through a seamless and secure collaboration process. We work exclusively through [Upwork](https://www.upwork.com/agencies/1864021705604676426/) to ensure transparency and professionalism in every project we undertake.
 
 ## License
 
-This template is open-source software licensed under the [GPL-3.0 license](https://opensource.org/licenses/GPL-3.0). Feel free to fork, modify, and use it in your projects.
-## Need an attribution-free version?
-Checkout [Lexington Themes](https://lexingtonthemes.com/) for free and premium multipage themes & UI Kits
-For freelancers, developers, businesses, and personal use.
-Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise.
+This project is open-source software licensed under the [GPL-3.0 license](https://opensource.org/licenses/GPL-3.0). You are free to fork, modify, and use it in your projects as per the terms of the license.
 
-# This template is using Tailwind CSS V4
+## Project Structure
 
-Now we are using only a CSS file. It's called `global.css` and it's located in the src/styles folder. Now we are eimporting Tailwind CSS on the same file instead of using the `tailwind.config.cjs` file. Like this:
-
-```css
-// Importing Tailwind CSS
-@import "tailwindcss";
-// Importing Tailwind plugins
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms";
-```
-
-Then to add your styles you will use the @theme directive. Like this:
-
-```css
-@theme {
-  /* Your CSS goes here, see how styles are written on the global.css file */
-}
-```
-
-Remember this is just in Alpha version, so you can use it as you want. Just keep an eye on the changes that Tailwind CSS is going to make.
-## Template Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Inside your project, you will find the following folders and files:
 
 ```
 /
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/
+│   ├── data/
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Folder Details:
+- **`src/pages/`**: Contains `.astro` or `.md` files. Each file is mapped to a route based on its file name.
+- **`src/components/`**: Includes all reusable components for your project.
+- **`src/data/`**: Stores any static JSON or data files used throughout the site.
+- **`src/styles/`**: Contains the `global.css` file for styling with Tailwind CSS.
+- **`public/`**: Houses static assets like images or SVGs.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Tailwind CSS Configuration
 
-Any static assets, like images, can be placed in the `public/` directory.
+This project uses Tailwind CSS V4. Instead of using a `tailwind.config.cjs` file, styles are managed directly in the `global.css` file using the `@theme` directive. For example:
+
+```css
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  /* Custom CSS goes here */
+}
+```
 
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands should be run from the root directory of the project:
 
 | Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
+|------------------------|--------------------------------------------------|
 | `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+| `npm run dev`          | Starts local dev server at `localhost:4321`      |
+| `npm run build`        | Builds the production site to `./dist/`          |
+| `npm run preview`      | Previews the build locally before deployment     |
+| `npm run astro ...`    | Runs Astro CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Displays help for Astro CLI commands             |
 
-## Want to learn more?
+## Deployment
 
-Feel free to check Lexington's [documentation](https://lexingtonthemes.com/documentation/quick-start/)
+Your production-ready build will be output to the `./dist/` directory after running `npm run build`. You can deploy this folder to your hosting provider of choice.
+
+## Contact
+
+For inquiries or collaboration opportunities, connect with us through:
+- [Upwork](https://www.upwork.com/agencies/1864021705604676426/)
+- [LinkedIn](https://www.linkedin.com/company/nova-devs-eu/)
+
+---
+
+Nova Devs: Innovating the future, one line of code at a time.

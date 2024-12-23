@@ -8,6 +8,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   // Add your domain name here
-  site: "https://lexingtonthemes.com/",
+  site: "https://nova-devs.vercel.app",
   integrations: [sitemap(), react()]
 });

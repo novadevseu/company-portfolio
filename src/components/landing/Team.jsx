@@ -9,7 +9,7 @@ const Team = () => {
   };
 
   return (
-    <section className="overflow-hidden relative ">
+    <section id='team' className="overflow-hidden relative h-165 ">
       <div className="px-8 md:px-12 max-w-7xl mx-auto">
         {/* Título con mayor separación */}
         <div className= "mb-10">
@@ -31,7 +31,7 @@ const Team = () => {
           </div>
 
           {/* Testimonial y datos con mayor separación */}
-          <p className="text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed mb-6">
+          <p className="text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed mb-6 h-25">
             {team[activeMember].testimonial}
           </p>
           <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-8">

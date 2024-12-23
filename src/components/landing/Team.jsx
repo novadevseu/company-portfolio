@@ -33,7 +33,7 @@ const Team = () => {
           </div>
 
           {/* Testimonial y datos con mayor separación */}
-          <p className="text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed mb-6 h-25">
+          <p className="text-lg text-[var(--color-muted)] max-w-xl mx-auto leading-relaxed mb-6">
             {team[activeMember].testimonial}
           </p>
           <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-8">

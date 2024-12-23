@@ -7,7 +7,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  // Add your domain name here
-  site: "https://nova-devs.vercel.app",
+  
   integrations: [sitemap(), react()]
 });

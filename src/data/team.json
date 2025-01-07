@@ -15,13 +15,6 @@
       "linkedin": "https://www.linkedin.com/in/c%C3%A9sar-aramis-su%C3%A1rez-orizondo/"
     },
     {
-      "name": "Leonard Smith",
-      "role": "Computer Engineer",
-      "image": "/images/leonard.jpg",
-      "testimonial": "I'm a Computer Engineering student determined to create and participate in web development projects and gain experience as a full stack developer.",
-      "linkedin": "https://linkedin.com/in/leonard-smith"
-    },
-    {
       "name": "Deniz Yetim",
       "role": "Software Engineer",
       "image": "/images/deniz.jpg",

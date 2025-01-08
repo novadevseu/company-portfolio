@@ -53,7 +53,7 @@ function About() {
                   />
                 </div>
               </div>
-              <p className="text-lg max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl  leading-relaxed drop-shadow">
                 We create high-quality, cross-platform applications designed to
                 solve real-world challenges. From sleek mobile apps to robust web
                 platforms, our solutions are crafted to meet your specific goals. At

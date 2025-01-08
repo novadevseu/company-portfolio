@@ -8,8 +8,8 @@ import Contact from "@/components/landing/Contact.astro";
 import Faq from "@/components/landing/Faq.astro";
 ---
 <BaseLayout>
-  <About client:only="react" />
-  <Team client:only="react" />
+  <About client:load/>
+  <Team client:load />
   <Services />
   <Faq  />
   <Contact />

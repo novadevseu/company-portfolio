@@ -73,7 +73,7 @@ function About() {
                 draggable={false} // Deshabilitar arrastre
                 style={{ userSelect: "none" }} // Deshabilitar selección
               />
-              <p className="text-xl text-[var(--color-muted)]">{icon.alt}</p>
+              <p className="text-xl text-[var(--color-muted)]" style={{ userSelect: "none" }}>{icon.alt}</p>
             </div>
           ))}
         </Carousel>

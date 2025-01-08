@@ -3,13 +3,13 @@ import BaseLayout from "@/data/BaseLayout.astro";
 import Services from "@/components/landing/Services.astro";
 import Team from "@/components/landing/Team";
 
-import About from "@/components/landing/About.astro";
+import About from "@/components/landing/About";
 import Contact from "@/components/landing/Contact.astro";
 import Faq from "@/components/landing/Faq.astro";
 ---
 <BaseLayout>
-  <About />
-  <Team client:load />
+  <About client:only="react" />
+  <Team client:only="react" />
   <Services />
   <Faq  />
   <Contact />

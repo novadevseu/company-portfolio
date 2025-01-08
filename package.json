@@ -22,9 +22,12 @@
     "astro": "^5.1.3",
     "astro-seo": "^0.8.4",
     "intersect": "^1.0.1",
+    "keen-slider": "^6.8.6",
     "preact": "^10.23.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {

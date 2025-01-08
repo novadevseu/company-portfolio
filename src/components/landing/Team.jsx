@@ -63,7 +63,7 @@ const Team = () => {
         </div>
 
         {/* Navegación */}
-        <div className="flex items-center justify-center mt-10 space-x-4">
+        <div className="flex items-center justify-center mt-10 space-x-4 mb-4">
           {team.map((member, index) => (
             <button
               key={index}

@@ -1,11 +1,9 @@
 import React from "react";
-import Slider from "react-slick";
-// Importa los estilos de slick (requerido para que se vea bien)
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function About() {
-  // Array de iconos. Agrega o quita según necesites.
+  // Array de iconos
   const icons = [
     { src: "https://img.icons8.com/color/144/angularjs.png", alt: "Angular" },
     { src: "https://img.icons8.com/officel/144/react.png", alt: "React" },
@@ -14,19 +12,6 @@ function About() {
     { src: "https://img.icons8.com/color/144/spring-logo.png", alt: "Spring Boot" },
     { src: "https://img.icons8.com/color/144/java-coffee-cup-logo--v1.png", alt: "Java" }
   ];
-
-  // Configuración de react-slick
-  const settings = {
-    infinite: true,       // Bucle infinito
-    slidesToShow: 5,      // Cuántos ítems se muestran a la vez
-    slidesToScroll: 1,    // Cuántos ítems avanza cada vez
-    autoplay: true,       // Reproducción automática
-    autoplaySpeed: 0,     // Espera cero ms entre transiciones (scroll continuo)
-    speed: 15000,         // Tiempo en ms que tarda en desplazarse un “slide”
-    cssEase: "linear",    // Animación lineal (sin aceleraciones)
-    pauseOnHover: false,   // No se detiene al pasar el ratón por encima
-    arrows: false,
-  };
 
   return (
     <section id="about" className="overflow-hidden relative mb-4">
@@ -53,7 +38,7 @@ function About() {
                   />
                 </div>
               </div>
-              <p className="text-lg md:text-xl  leading-relaxed drop-shadow">
+              <p className="text-lg md:text-xl leading-relaxed drop-shadow">
                 We create high-quality, cross-platform applications designed to
                 solve real-world challenges. From sleek mobile apps to robust web
                 platforms, our solutions are crafted to meet your specific goals. At
@@ -66,20 +51,32 @@ function About() {
         </section>
       </div>
 
-      {/* Carrusel de íconos (reemplazamos las “cards descriptivos” con react-slick) */}
+      {/* Carrusel con imágenes no seleccionables */}
       <div className="px-8 mb-16">
-        <Slider {...settings}>
+        <Carousel
+          showArrows={true}
+          showIndicators={true}
+          showThumbs={false}   // No queremos miniaturas
+          infiniteLoop={true}  // Ciclo infinito
+          autoPlay={false}     // Sin reproducción automática
+          interval={3000}      // Se ignora sin autoPlay
+          transitionTime={1000}   // Velocidad de transición
+          swipeable={true}     // Permitir “swipe” en móviles
+          emulateTouch={true}   // Soporte de touch en desktop (opcional)
+        >
           {icons.map((icon, index) => (
-            <div key={index} className="flex flex-col items-center transition-transform hover:scale-105">
+            <div key={index} className="text-center py-10">
               <img
                 src={icon.src}
                 alt={icon.alt}
-                className="h-16 w-16 mb-4"
+                className="max-w-[100px] max-h-[100px] mx-auto object-contain"
+                draggable={false} // Deshabilitar arrastre
+                style={{ userSelect: "none" }} // Deshabilitar selección
               />
-              
+              <p className="text-xl text-[var(--color-muted)]">{icon.alt}</p>
             </div>
           ))}
-        </Slider>
+        </Carousel>
       </div>
     </section>
   );

@@ -147,3 +147,6 @@ section {
 .footer a:hover {
   color: var(--color-accent);
 }
+.carousel .carousel-status {
+  display: none;
+}

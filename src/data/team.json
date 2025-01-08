@@ -1,39 +1,37 @@
 [
-    {
-        "name": "Ivan López",
-        "role": "Software Developer",
-        "image": "/images/ivan.jpg",
-        "testimonial": "I am a software developer passionate about technology and continuous learning. Dedicated to collaborating with our international team to deliver impactful and innovative solutions.",
-        "linkedin": "https://www.linkedin.com/in/ivan-lopez-it/"
-      }
-      ,
-    {
-      "name": "Cesar Aramis",
-      "role": "Software Developer",
-      "image": "/images/cesar.jpg",
-      "testimonial": "As a software developer, I specialize in creating and optimizing web applications to meet client needs. With expertise in Tailwind CSS and software infrastructure, I deliver efficient and visually appealing solutions while contributing to team success.",
-      "linkedin": "https://www.linkedin.com/in/c%C3%A9sar-aramis-su%C3%A1rez-orizondo/"
-    },
-    {
-      "name": "Deniz Yetim",
-      "role": "Software Engineer",
-      "image": "/images/deniz.jpg",
-      "testimonial": "As a dedicated software engineering student, my focus is on creating a diverse portfolio of projects, particularly in web development.",
-      "linkedin": "https://www.linkedin.com/in/denizyetim/"
-    },
-    {
-      "name": "Markus Abramian",
-      "role": "Software Developer",
-      "image": "/images/markus.jpg",
-      "testimonial": "I am a Software Developer specialized in Full Stack web development. I am passionate about creating complete solutions.",
-      "linkedin": "https://www.linkedin.com/in/markus-abramian-medina-1b0281273/"
-    },
-    {
-      "name": "Ali Gencay",
-      "role": "Software Engineer",
-      "image": "/images/ali.jpg",
-      "testimonial": "I’m a Software Engineering student passionate about Web Development, specializing in Frontend and Backend with React and Spring Boot.",
-      "linkedin": "https://www.linkedin.com/in/ali-gencay-417aa3241/"
-    }
-  ]
-  
+  {
+    "name": "Ivan López",
+    "role": "Software Developer",
+    "image": "/images/ivan.jpg",
+    "testimonial": "I am a software developer passionate about technology and continuous learning. Dedicated to collaborating with our international team to deliver impactful and innovative solutions.",
+    "linkedin": "https://www.linkedin.com/in/ivan-lopez-it/"
+  },
+  {
+    "name": "Cesar Aramis",
+    "role": "Software Developer",
+    "image": "/images/cesar.jpg",
+    "testimonial": "As a software developer, I specialize in creating and optimizing web applications to meet client needs. With expertise in Tailwind CSS and software infrastructure, I deliver efficient and visually appealing solutions while contributing to team success.",
+    "linkedin": "https://www.linkedin.com/in/c%C3%A9sar-aramis-su%C3%A1rez-orizondo/"
+  },
+  {
+    "name": "Deniz Yetim",
+    "role": "Software Engineer",
+    "image": "/images/deniz.jpg",
+    "testimonial": "As a dedicated software engineering student, my focus is on creating a diverse portfolio of projects, particularly in web development.",
+    "linkedin": "https://www.linkedin.com/in/denizyetim/"
+  },
+  {
+    "name": "Markus Abramian",
+    "role": "Software Developer",
+    "image": "/images/markus.jpg",
+    "testimonial": "I am a Software Developer specialized in Full Stack web development. I am passionate about creating complete solutions.",
+    "linkedin": "https://www.linkedin.com/in/markus-abramian-medina-1b0281273/"
+  },
+  {
+    "name": "Ali Gencay",
+    "role": "Software Engineer",
+    "image": "/images/ali.jpg",
+    "testimonial": "I’m a Software Engineering student passionate about Web Development, specializing in Frontend and Backend with React and Spring Boot.",
+    "linkedin": "https://www.linkedin.com/in/ali-gencay-417aa3241/"
+  }
+]

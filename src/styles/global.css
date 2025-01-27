@@ -1,16 +1,22 @@
+/* -------------------------------- */
+/* IMPORTACIONES Y PLUGINS          */
+/* -------------------------------- */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-scrollbar-hide";
 
+/* -------------------------------- */
+/* VARIABLES Y TEMAS                */
+/* -------------------------------- */
 @theme {
-  /* Updated colors for a modern and clean design */
+  /* Colores personalizados */
   --color-primary: rgb(0, 204, 255); /* Azul principal */
-  --color-background: rgb(18, 23, 33); /* Fondo principal oscuro */
+  --color-background: rgb(18, 23, 33); /* Fondo oscuro principal */
   --color-secondary-background: rgb(255, 255, 255); /* Blanco para contraste */
   --color-accent: rgb(53, 89, 149); /* Azul profundo como acento */
-  --color-muted: rgb(142, 152, 162); /* Gris suave para texto secundario */
-  --color-highlight: rgb(28, 38, 53); /* Tono intermedio para bordes y separación */
+  --color-muted: rgb(142, 152, 162); /* Gris para texto secundario */
+  --color-highlight: rgb(28, 38, 53); /* Tono intermedio para bordes/separadores */
 }
 
 :root {
@@ -20,21 +26,20 @@
 }
 
 @supports (font-variation-settings: normal) {
-  /* Use variable font if supported */
   :root {
-    font-family: InterVariable, sans-serif;
+    font-family: InterVariable, sans-serif; /* Fuente variable si está disponible */
   }
 }
 
-
-/* Headings */
+/* -------------------------------- */
+/* ESTILOS GENERALES                */
+/* -------------------------------- */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
   font-weight: bold;
   margin: 0;
 }
 
-/* Links */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -45,7 +50,20 @@ a:hover {
   color: var(--color-accent);
 }
 
-/* Buttons */
+section {
+  background-color: var(--color-background);
+}
+
+/* Evitar FOUC (Flash Of Unstyled Content) */
+@font-face {
+  font-display: var(--fontsource-Inter-font-display, optional);
+}
+
+/* -------------------------------- */
+/* COMPONENTES DE INTERFAZ          */
+/* -------------------------------- */
+
+/* Botones */
 .button {
   background-color: var(--color-primary);
   color: var(--color-secondary-background);
@@ -63,7 +81,7 @@ a:hover {
   border-color: var(--color-primary);
 }
 
-/* Cards */
+/* Tarjetas */
 .card {
   background-color: var(--color-secondary-background);
   border: 1px solid var(--color-highlight);
@@ -97,17 +115,14 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-/* Forms */
+/* Formularios */
 form {
   margin: 1.5rem 0;
 }
 
-/* Section Styling */
-section {
- 
-  background-color: var(--color-background);
-
-}
+/* -------------------------------- */
+/* COMPONENTES ESPECÍFICOS          */
+/* -------------------------------- */
 
 /* Navbar */
 .navbar {
@@ -147,6 +162,85 @@ section {
 .footer a:hover {
   color: var(--color-accent);
 }
+
+/* -------------------------------- */
+/* TIPOGRAFÍA Y ESTILOS DE BLOQUES  */
+/* -------------------------------- */
+.block-title {
+  @apply text-3xl font-bold tracking-normal;
+}
+
+.block-big-title {
+  @apply text-4xl xl:text-5xl font-bold tracking-normal;
+}
+
+.block-subtitle {
+  @apply text-xs tracking-wider font-bold uppercase;
+}
+
+.content-title {
+  @apply text-lg font-bold tracking-normal;
+}
+
+.content-text-white {
+  @apply text-base leading-relaxed;
+}
+
+.content-text-gray {
+  @apply text-gray-400 text-base;
+}
+
+/* -------------------------------- */
+/* DIVISORES Y FORMAS DECORATIVAS   */
+/* -------------------------------- */
+
+/* Hero Section */
+.shape-divider-bottom-1665343298 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.shape-divider-bottom-1665343298 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 200px;
+}
+
+/* Features Top */
+.shape-divider-bottom-1665696614 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.shape-divider-bottom-1665696614 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 127px;
+  transform: rotateY(180deg);
+}
+
+/* Features Bottom */
+.shape-divider-top-1665696661 {
+  overflow: hidden;
+  line-height: 0;
+}
+
+.shape-divider-top-1665696661 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 127px;
+  transform: rotateY(180deg);
+}
+
+/* -------------------------------- */
+/* CAROUSEL                         */
+/* -------------------------------- */
 .carousel .carousel-status {
   display: none;
 }

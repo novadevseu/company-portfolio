@@ -11,29 +11,31 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^4.0.1",
-    "@astrojs/react": "^4.1.2",
+    "@astrojs/preact": "^4.0.3",
+    "@astrojs/react": "^4.2.0",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrolib/seo": "^1.0.0-beta.5",
-    "@tailwindcss/forms": "^0.5.9",
-    "@tailwindcss/typography": "^0.5.15",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "astro": "^5.1.3",
+    "@astrolib/seo": "1.0.0-beta.8",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "astro": "^5.1.10",
     "astro-seo": "^0.8.4",
     "intersect": "^1.0.1",
     "keen-slider": "^6.8.6",
-    "preact": "^10.23.2",
+    "preact": "^10.25.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.0",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "framer-motion": "^11.2.10",
+    "@fontsource/inter": "^5.0.18",
+    "swiper": "^11.2.1",
+    "tailwind-scrollbar-hide": "^1.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0-alpha.23",
-    "tailwindcss": "^4.0.0-alpha.23"
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
   }
 }

@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection("work");
+---
+
+<section class="w-screen flex justify-center items-center relative">
+  <div class="absolute -top-16" id="projects" />
+  <div class="pb-0 pt-4 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px]">
+    
+    <div class="container px-4 mb-20">
+      <div class="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0">
+        <h3 class="text-accent text-xl sm:text-2xl mb-6 font-bold">Our Projects</h3>
+        <h2 class="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
+          Latest Works
+        </h2>
+        <p class="mb-6 text-muted">
+          Explore some of our recent projects that showcase our expertise.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap -mx-4 items-start h-auto sm:h-[30rem] lg:h-[31rem] xl:h-[35rem]">
+        
+        <!-- Primer Proyecto Principal -->
+        <div class="flex sm:hidden lg:flex w-11/12 mx-auto sm:ml-0 sm:mr-0 lg:w-1/2 xl:w-3/5 px-4 mb-8 lg:mb-0 h-full">
+          <a href={`/projects/${projects[0].data.path}`} class="p-6 sm:p-10 bg-transparent shadow-lg shadow-highlight rounded-3xl h-full hover:shadow-xl hover:shadow-accent transition cursor-pointer">
+            <img src={projects[0].data.image} alt={projects[0].data.title} class="rounded-3xl mb-6 w-full" />
+            <h3 class="mb-4 text-2xl font-bold font-heading text-primaryText">
+              {projects[0].data.title}
+            </h3>
+            <p class="text-secondaryText leading-loose">
+              {projects[0].data.description}
+            </p>
+          </a>
+        </div>
+
+        <!-- Proyectos Restantes -->
+        <div class="hidden sm:flex mx-auto lg:ml-0 lg:mr-0 w-11/12 sm:w-4/5 lg:w-1/2 xl:w-2/5 px-4 flex-col justify-between h-full">
+          {projects.slice(1).map((project) => (
+            <a href={`/projects/${project.data.path}`} class="flex gap-4 p-10 bg-transparent shadow-lg shadow-highlight rounded-3xl min-h-1/2 h-1/2 max-h-[47%] hover:shadow-xl hover:shadow-accent transition cursor-pointer w-full">
+              <div class="pt-2">
+                <h3 class="mb-4 text-xl font-bold font-heading text-primaryText">
+                  {project.data.title}
+                </h3>
+                <p class="text-secondaryText leading-loose">
+                  {project.data.description}
+                </p>
+              </div>
+              <img src={project.data.image} alt={project.data.title} class="rounded-3xl mb-6 w-[9rem] h-[9rem] lg:w-auto lg:h-auto xl:w-full" />
+            </a>
+          ))}
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</section>

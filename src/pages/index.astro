@@ -8,6 +8,7 @@ import { Team } from '../components/landing/Team.jsx'
 import { FAQ } from '../components/landing/FAQ.jsx'
 import Projects from '../components/landing/Projects.astro'
 import { Footer } from '../components/global/Footer.jsx'
+import { Divider } from '../components/global/Divider.jsx'
 import { ScrollUpButton } from '../components/global/ScrollUpButton'
 
 import '../styles/global.css'
@@ -16,10 +17,14 @@ import '../styles/global.css'
 <Layout title="Tailcast">
   <Navbar client:load />
   <Home client:load />
+  <Divider client:load />
   <Services client:load />
   <Services2 client:load />
+  <Divider client:load />
   <Team client:load />
+  <Divider client:load />
   <Projects client:load />
+  <Divider client:load />
   <FAQ client:load /> 
   <Footer />
   <ScrollUpButton client:load />

@@ -6,7 +6,7 @@ import { CheckArrowIcon } from "../../assets/icons/CheckArrowIcon";
 
 export const Services2 = () => {
   return (
-    <section id="services2" className="relative w-screen flex flex-col lg:flex-row justify-between items-center bg-background text-muted py-24 px-16">
+    <section id="services" className="relative w-screen flex flex-col lg:flex-row justify-between items-center bg-background text-muted py-24 px-16">
       <motion.div className="w-full lg:w-1/2 flex justify-start z-10 order-last lg:order-first"   initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

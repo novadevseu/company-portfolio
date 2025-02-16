@@ -5,23 +5,20 @@ import { GithubIcon } from "../../assets/icons/GithubIcon";
 
 const footerData = [
   {
-    title: "Products",
-    items: ["Services", "About Us", "News and Stories", "Roadmap"],
+    title: "Navigation",
+    items: ["Home", "Services", "Team", "Projects", "FAQ"],
   },
   {
     title: "Important Links",
     items: [
-      "Organization Team",
-      "Our Journeys",
-      "Pricing Plans",
-      "Roadmap",
       "Terms & Conditions",
       "Privacy Policy",
+      "Cookie Policy",
     ],
   },
   {
     title: "Company",
-    items: ["About Us", "Jobs", "Press", "Contact Us"],
+    items: ["Jobs", "About Us", "Contact Us"],
   },
 ];
 
@@ -81,7 +78,7 @@ export const Footer = () => {
                   {section.items.map((item, idx) => (
                     <li key={idx} className="mb-4">
                       <a
-                        href="#"
+                        href={`#${item.toLowerCase()}`}
                         className="text-muted hover:border-b-2 hover:border-accent transition duration-300 ease-in-out"
                         aria-label={item}
                       >

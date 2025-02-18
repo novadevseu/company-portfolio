@@ -104,7 +104,7 @@ export const ContactModal = ({ setIsOpen }) => {
               </div>
 
               <div className="w-full lg:w-1/2">
-                <h3 className="text-xl font-bold text-primary text-center mb-4">
+                <h3 className="text-xl font-bold text-secondary-background text-center mb-4">
                   Get in Touch with Us
                 </h3>
                 <p className="text-muted text-center mb-4">
@@ -149,7 +149,7 @@ export const ContactModal = ({ setIsOpen }) => {
                     ></textarea>
 
                     <button
-                      className="w-full py-3 text-secondary-background font-semibold rounded-lg shadow-md focus:ring focus:ring-accent bg-primary hover:bg-accent transition ease-in-out duration-200"
+                      className="w-full py-3 text-secondary-background font-semibold rounded-lg shadow-md focus:ring focus:ring-primary bg-accent hover:bg-primary transition ease-in-out duration-200 cursor-pointer"
                       type="submit"
                       aria-label="Send Message"
                     >

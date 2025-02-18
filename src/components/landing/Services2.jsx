@@ -13,8 +13,8 @@ export const Services2 = () => {
           transition={{ duration: 0.5, delay: 0.2 }}>
         <div className="w-3/4 mx-auto flex flex-wrap justify-start">
           <div className="w-full px-2">
-            <img src={service5.src} alt="Tech Stack 1" className="rounded-xl shadow-lg shadow-highlight mb-4" />
-            <img src={service6.src} alt="Tech Stack 2" className="rounded-xl shadow-lg shadow-highlight" />
+            <img src={service5.src} alt="Tech Stack 1" className="w-4/5 rounded-xl shadow-lg shadow-highlight mb-4" />
+            <img src={service6.src} alt="Tech Stack 2" className="w-4/5 rounded-xl shadow-lg shadow-highlight" />
           </div>
         </div>
       </motion.div>

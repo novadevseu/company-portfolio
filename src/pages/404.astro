@@ -1,0 +1,20 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Nova Devs | 404 Not Found">
+  <div
+    class="bg-background text-secondary-background flex items-center justify-center min-h-screen"
+  >
+    <div class="text-center w-1/2 p-8 rounded-md shadow-md shadow-highlight bg-highlight">
+      <h1 class="text-9xl font-bold text-primary mb-4">4 <span class="text-accent">0</span> <span class="text-secondary-background">4</span></h1>
+      <h3 class="text-3xl text-muted mb-8">
+        Lo sentimos, la página que buscas <span class="text-accent">no existe</span>.
+      </h3>
+      <a href="/" class="bg-accent text-secondary-background px-8 py-4 rounded-md hover:bg-primary hover:box-shadow font-bold text-lg transition duration-300"
+        >Volver al inicio</a
+      >
+    </div>
+  </div>
+</Layout>

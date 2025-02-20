@@ -10,6 +10,7 @@ export interface Props {
   title: string;
 }
 
+import { ClientRouter } from 'astro:transitions';
 const { title } = Astro.props;
 ---
 
@@ -25,6 +26,7 @@ const { title } = Astro.props;
       content="Nova Devs - Web Development Platform - Custom web and cross-platform application development for international clients."
     />
     <title>{title}</title>
+    <ClientRouter />
   </head>
   <body>
     <main aria-label="Main content">

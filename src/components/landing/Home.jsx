@@ -29,7 +29,7 @@ export const Home = () => {
       </div>
 
       <motion.div className="w-full lg:w-1/2 flex justify-center items-center rounded-xl lg:mt-0 mt-12" initial={{ opacity: 0, y: 10, zIndex: 20 }} animate={{ opacity: 1, y: 0, zIndex: 20 }} transition={{ duration: 0.5, delay: 0.15 }}>
-        <img src={logo.src} alt="Logo Image" className="w-3/4 lg:w-1/2 2xl:w-[1200px] mx-auto rounded-xl shadow-lg shadow-highlight" />
+        <img src={logo.src} alt="Logo Image" className="w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-highlight" />
       </motion.div>
     </section>
   );

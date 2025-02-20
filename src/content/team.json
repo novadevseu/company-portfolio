@@ -8,9 +8,9 @@
   },
   {
     "name": "Cesar A. Suárez Orizondo",
-    "role": "Software Developer",
+    "role": "Full Stack Developer",
     "image": "/src/assets/images/team/cesar.jpg",
-    "testimonial": "As a software developer, I specialize in creating and optimizing web applications to meet client needs. With expertise in Tailwind CSS and software infrastructure, I deliver efficient and visually appealing solutions while contributing to team success.",
+    "testimonial": "As a software developer, I specialize in creating and optimizing web applications to meet client needs. With expertise in front-end and back-end development and software infrastructure, I deliver efficient and visually appealing solutions while contributing to team success.",
     "linkedin": "https://www.linkedin.com/in/c%C3%A9sar-aramis-su%C3%A1rez-orizondo/"
   },
   {
@@ -33,5 +33,19 @@
     "image": "/src/assets/images/team/ali.jpg",
     "testimonial": "I’m a Software Engineering student passionate about Web Development, specializing in Frontend and Backend with React and Spring Boot.",
     "linkedin": "https://www.linkedin.com/in/ali-gencay-417aa3241/"
+  },
+  {
+    "name": "Joao Pedro Lima Dias",
+    "role": "Full Stack Developer",
+    "image": "/src/assets/images/team/joao.jpg",
+    "testimonial": "I am a full stack developer with a strong focus on front-end development. I have a passion for creating visually appealing and user-friendly web applications.",
+    "linkedin": "https://www.linkedin.com/in/joao-pedro-lima-dias-6021b9229/"
+  },
+  {
+    "name": "Halder Osmar Tarrillo",
+    "role": "Full Stack Developer",
+    "image": "/src/assets/images/team/halder.jpg",
+    "testimonial": "I am a Full Stack Developer with expertise in both front-end and back-end technologies. I am passionate about building scalable and efficient web applications.",
+    "linkedin": "https://www.linkedin.com/in/halder-osmar/"
   }
 ]

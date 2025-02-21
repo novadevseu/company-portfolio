@@ -1,20 +1,45 @@
 ---
 import "../styles/global.css";
-import Layout from "../layouts/Layout.astro";
+import { motion } from "framer-motion";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<Layout title="Nova Devs | 404 Not Found">
-  <div
-    class="bg-background text-secondary-background flex items-center justify-center min-h-screen"
-  >
-    <div class="text-center w-1/2 p-8 rounded-md shadow-md shadow-highlight bg-highlight">
-      <h1 class="text-9xl font-bold text-primary mb-4">4 <span class="text-accent">0</span> <span class="text-secondary-background">4</span></h1>
-      <h3 class="text-3xl text-muted mb-8">
-        Lo sentimos, la página que buscas <span class="text-accent">no existe</span>.
-      </h3>
-      <a href="/" class="bg-accent text-secondary-background px-8 py-4 rounded-md hover:bg-primary hover:box-shadow font-bold text-lg transition duration-300"
-        >Volver al inicio</a
+<BaseLayout title="Nova Devs | 404 Not Found">
+  <div class="bg-background text-secondary-background flex items-center justify-center min-h-screen">
+    <motion.div client:load
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="text-center w-1/2 p-8 rounded-md shadow-md shadow-highlight bg-highlight"
+    >
+      <motion.h1 client:load
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-9xl font-bold text-primary mb-4"
       >
-    </div>
+        4 <span class="text-accent">0</span> <span class="text-secondary-background">4</span>
+      </motion.h1>
+
+      <motion.h3 client:load
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        className="text-3xl text-muted mb-8"
+      >
+        Lo sentimos, la página que buscas <span class="text-accent">no existe</span>.
+      </motion.h3>
+
+      <motion.a client:load
+        href="/"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1, backgroundColor: "var(--color-primary)" }}
+        transition={{ duration: 0.3 }}
+        className="bg-accent text-secondary-background px-8 py-4 rounded-md hover:bg-primary hover:box-shadow font-bold text-lg transition duration-300"
+      >
+        Volver al inicio
+      </motion.a>
+    </motion.div>
   </div>
-</Layout>
+</BaseLayout>

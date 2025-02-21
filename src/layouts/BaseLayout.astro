@@ -11,8 +11,6 @@ export interface Props {
 }
 
 import { ClientRouter } from 'astro:transitions';
-import { Navbar } from "@/components/global/Navbar";
-import { Footer } from "@/components/global/Footer";
 const { title } = Astro.props;
 ---
 
@@ -31,12 +29,9 @@ const { title } = Astro.props;
     <ClientRouter />
   </head>
   <body>
-    <Navbar client:load />
     <main aria-label="Main content">
       <slot />
     </main>
-    <Footer client:load
-     />
     <style is:global>
       html {
         font-family: Inter;

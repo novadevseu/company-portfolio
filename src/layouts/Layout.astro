@@ -1,0 +1,49 @@
+---
+import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
+
+export interface Props {
+  title: string;
+}
+
+import { ClientRouter } from 'astro:transitions';
+import { Navbar } from "@/components/global/Navbar";
+import { Footer } from "@/components/global/Footer";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Nova Devs - Web Development Platform - Custom web and cross-platform application development for international clients."
+    />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main aria-label="Main content">
+      <slot />
+    </main>
+    <Footer client:load
+     />
+    <style is:global>
+      html {
+        font-family: Inter;
+        background-color: #26272b;
+        overflow-x: hidden;
+        scroll-behavior: smooth !important;
+      }
+    </style>
+  </body>
+</html>

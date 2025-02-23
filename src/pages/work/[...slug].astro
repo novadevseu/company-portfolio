@@ -1,0 +1,144 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { motion } from "framer-motion";
+import { fadeInUp } from "../../utils/animations";
+import "../../styles/global.css";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { BaseNavbar } from "@/components/global/BaseNavbar";
+import { Footer } from "@/components/global/Footer";
+
+interface Props {
+  project: CollectionEntry<"work">;
+}
+
+export async function getStaticPaths() {
+  const projects = await getCollection("work");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<BaseLayout title={project.data.title}>
+  <BaseNavbar client:load />
+  <section class="w-full py-16 pt-32 sm:pt-40 md:py-24 md:pt-32 lg:pt-40 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-background text-secondary-background">
+    <div class="container  mx-auto px-6 lg:px-12 xl:px-20">
+      
+      <!-- Título del Proyecto -->
+      <motion.h1 
+        client:load
+        className="text-4xl md:text-5xl font-extrabold text-accent mb-6 leading-tight" 
+        {...fadeInUp}
+      >
+        {project.data.title}
+      </motion.h1>
+    
+      <!-- Estado del Proyecto -->
+      <motion.p 
+        client:load
+        className="text-lg sm:text-xl md:text-xl text-secondary-background mb-6"
+        {...fadeInUp}
+      >
+       {project.data.status}
+      </motion.p>
+
+      <!-- Descripción -->
+      <motion.p 
+        client:load
+        className="text-lg md:text-xl text-muted mb-6 leading-relaxed"
+        {...fadeInUp}
+      >
+        {project.data.description}
+      </motion.p>
+      
+      <!-- Tecnologías -->
+      <motion.div client:load className="mt-4 flex flex-wrap items-center gap-4" {...fadeInUp}>
+        <span class="text-accent font-semibold text-lg">Technologies:</span>
+        <ul class="flex flex-wrap gap-3 text-muted text-sm md:text-base">
+          {project.data.tech.map((tech) => (
+            <li class="px-4 py-2 bg-highlight text-secondary-background rounded-lg shadow-md">
+              {tech}
+            </li>
+          ))}
+        </ul>
+      </motion.div>
+
+      <!-- Contenido del Proyecto -->
+      <motion.div 
+        client:load 
+        className="content mt-10 space-y-6 md:space-y-10 p-6 bg-highlight rounded-xl shadow-lg"
+        {...fadeInUp}
+      >
+        <Content />
+      </motion.div>
+
+    </div>
+  </section>
+  <Footer client:load />
+</BaseLayout>
+
+<style>
+  .content {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  .content > * + * {
+    margin-top: 1.25rem;
+  }
+
+  .content h1, .content h2, .content h3, .content h4, .content h5 {
+    margin: 1.5rem 0;
+    font-weight: bold;
+    color: var(--color-secondary-background);
+  }
+
+  .content h1 { font-size: 2rem; }
+  .content h2 { font-size: 1.75rem; }
+  .content h3 { font-size: 1.5rem; }
+  .content h4 { font-size: 1.25rem; }
+  .content h5 { font-size: 1.1rem; }
+
+  .content img {
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    background: var(--color-highlight);
+    border: 1px solid var(--color-muted);
+  }
+
+  .content blockquote {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--color-accent);
+    color: var(--color-secondary-background);
+    background: var(--color-highlight);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .back-link,
+  .entry-link,
+  .content a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color 0.3s ease-in-out;
+  }
+
+  .back-link:hover,
+  .back-link:focus,
+  .entry-link:hover,
+  .entry-link:focus,
+  .content a:hover,
+  .content a:focus {
+    text-decoration-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+</style>

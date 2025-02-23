@@ -1,16 +1,22 @@
+/* -------------------------------- */
+/* IMPORTACIONES Y PLUGINS          */
+/* -------------------------------- */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-scrollbar-hide";
 
+/* -------------------------------- */
+/* VARIABLES Y TEMAS                */
+/* -------------------------------- */
 @theme {
-  /* Updated colors for a modern and clean design */
+  /* Colores personalizados */
   --color-primary: rgb(0, 204, 255); /* Azul principal */
-  --color-background: rgb(18, 23, 33); /* Fondo principal oscuro */
+  --color-background: rgb(18, 23, 33); /* Fondo oscuro principal */
   --color-secondary-background: rgb(255, 255, 255); /* Blanco para contraste */
   --color-accent: rgb(53, 89, 149); /* Azul profundo como acento */
-  --color-muted: rgb(142, 152, 162); /* Gris suave para texto secundario */
-  --color-highlight: rgb(28, 38, 53); /* Tono intermedio para bordes y separación */
+  --color-muted: rgb(142, 152, 162); /* Gris para texto secundario */
+  --color-highlight: rgb(28, 38, 53); /* Tono intermedio para bordes/separadores */
 }
 
 :root {
@@ -20,133 +26,7 @@
 }
 
 @supports (font-variation-settings: normal) {
-  /* Use variable font if supported */
   :root {
-    font-family: InterVariable, sans-serif;
+    font-family: InterVariable, sans-serif; /* Fuente variable si está disponible */
   }
-}
-
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-primary);
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Links */
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--color-accent);
-}
-
-/* Buttons */
-.button {
-  background-color: var(--color-primary);
-  color: var(--color-secondary-background);
-  border: 1px solid var(--color-accent);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover {
-  background-color: var(--color-accent);
-  color: var(--color-secondary-background);
-  border-color: var(--color-primary);
-}
-
-/* Cards */
-.card {
-  background-color: var(--color-secondary-background);
-  border: 1px solid var(--color-highlight);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  color: var(--color-muted);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Inputs */
-input, textarea, select {
-  background-color: var(--color-secondary-background);
-  color: var(--color-muted);
-  border: 1px solid var(--color-highlight);
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  width: 100%;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.3);
-  outline: none;
-}
-
-/* Forms */
-form {
-  margin: 1.5rem 0;
-}
-
-/* Section Styling */
-section {
- 
-  background-color: var(--color-background);
-
-}
-
-/* Navbar */
-.navbar {
-  background-color: var(--color-highlight);
-  border-bottom: 1px solid var(--color-accent);
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 50;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a {
-  color: var(--color-muted);
-  font-weight: bold;
-  margin-right: 1rem;
-}
-
-.navbar a:hover {
-  color: var(--color-primary);
-}
-
-/* Footer */
-.footer {
-  background-color: var(--color-highlight);
-  color: var(--color-muted);
-  padding: 2rem;
-  text-align: center;
-  border-top: 1px solid var(--color-accent);
-}
-
-.footer a {
-  color: var(--color-primary);
-}
-
-.footer a:hover {
-  color: var(--color-accent);
-}
-.carousel .carousel-status {
-  display: none;
 }

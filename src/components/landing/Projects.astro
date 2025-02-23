@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import { fadeInUp } from "../../utils/animations";
+import { ProjectCarousel } from "../global/ProjectCarousel";
+import { motion } from "framer-motion";
+
+const projects = (await getCollection("work")).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+---
+
+<motion.section
+  client:load
+  id="projects"
+  className="w-screen flex justify-center items-center relative py-24 px-6 bg-background text-secondary-background"
+  {...fadeInUp}
+>
+  <motion.div
+    client:load
+    className="pb-0 pt-4 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] relative"
+    {...fadeInUp}
+  >
+    <motion.div client:load className="container px-4 mb-20" {...fadeInUp}>
+      <motion.div
+        client:load
+        className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0"
+        {...fadeInUp}
+      >
+        <h3 class="text-accent text-xl sm:text-2xl mb-6 font-bold">
+          Our Projects
+        </h3>
+        <h2
+          class="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white"
+        >
+          Check out our <span class="text-accent">work</span>
+        </h2>
+        <p class="mb-6 text-lg text-muted">
+          Explore some of our recent projects that showcase our expertise.
+        </p>
+      </motion.div>
+
+      <!-- Aquí se carga el componente React -->
+      <ProjectCarousel client:load projects={projects} />
+    </motion.div>
+  </motion.div>
+</motion.section>

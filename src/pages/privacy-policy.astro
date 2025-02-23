@@ -1,0 +1,119 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { BaseNavbar } from "@/components/global/BaseNavbar";
+import { motion } from "framer-motion";
+import { Footer } from "@/components/global/Footer";
+
+import "../styles/global.css";
+import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
+---
+
+<BaseLayout title="Nova Devs | Privacy Policy">
+  <BaseNavbar client:load />
+  <motion.section 
+    client:load 
+    className="w-screen flex justify-center py-24 px-6 bg-background text-secondary-background"
+    initial="initial"
+    whileInView="whileInView"
+    viewport={{ once: true }}
+  >
+    <motion.div client:load className="2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px]" {...fadeInUp}>
+      <div class="container gap-4 px-6 sm:px-12">
+        <motion.h1 client:load className="text-4xl sm:text-5xl font-bold text-primary mb-8" {...fadeInUp}>
+          Privacy Policy
+        </motion.h1>
+        
+        <motion.p client:load className="text-lg text-muted mb-6" {...fadeInUp}>
+          Last Updated: February 2025
+        </motion.p>
+
+        <motion.div client:load className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-12">
+          <!-- Introduction -->
+          <motion.section client:load {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent mb-4">1. Introduction</h2>
+            <p class="text-muted">
+              At Nova Devs, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our website and services.
+            </p>
+          </motion.section>
+
+          <!-- Information Collection -->
+          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-1">
+            <h2 class="text-3xl font-bold text-accent mb-4">2. Information We Collect</h2>
+            <p class="text-muted">
+              We collect the following types of information:
+            </p>
+            <ul class="list-disc pl-6 text-white">
+              <li>Personal details such as name, email, and contact information when you interact with our services.</li>
+              <li>Technical data such as IP addresses, browser type, and device information.</li>
+              <li>Cookies and usage data to enhance your experience.</li>
+            </ul>
+          </motion.section>
+
+          <!-- How We Use Information -->
+          <motion.section client:load {...fadeInLeft} className="space-y-4 md:mt-0 md:col-start-1 md:row-start-2">
+            <h2 class="text-3xl font-bold text-accent mb-4">3. How We Use Your Information</h2>
+            <p class="text-muted">
+              We use the collected data for:
+            </p>
+            <ul class="list-disc pl-6 gap text-white">
+              <li>Providing and maintaining our services.</li>
+              <li>Personalizing your experience.</li>
+              <li>Improving our website and customer support.</li>
+              <li>Sending updates, newsletters, and promotional content (with your consent).</li>
+            </ul>
+          </motion.section>
+
+          <!-- Sharing Data -->
+          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-2">
+            <h2 class="text-3xl font-bold text-accent mb-4">4. Data Sharing & Third Parties</h2>
+            <p class="text-muted">
+              We do not sell or trade your personal data. However, we may share information with:
+            </p>
+            <ul class="list-disc pl-6 text-white">
+              <li>Trusted third-party services that help us operate our platform.</li>
+              <li>Legal authorities when required by law.</li>
+            </ul>
+          </motion.section>
+
+          <!-- Security -->
+          <motion.section client:load {...fadeInLeft} className="space-y-4 md:mt-0 md:col-start-1 md:row-start-3">
+            <h2 class="text-3xl font-bold text-accent mb-4">5. Security Measures</h2>
+            <p class="text-muted">
+              We implement strong security measures to protect your personal data from unauthorized access, alteration, or destruction. However, no method of transmission over the internet is 100% secure.
+            </p>
+          </motion.section>
+
+          <!-- Your Rights -->
+          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-3">
+            <h2 class="text-3xl font-bold text-accent mb-4">6. Your Rights & Control</h2>
+            <p class="text-muted">
+              You have the right to:
+            </p>
+            <ul class="list-disc pl-6 text-white">
+              <li>Access, modify, or delete your personal data.</li>
+              <li>Opt out of marketing communications.</li>
+              <li>Request a copy of the information we hold about you.</li>
+            </ul>
+          </motion.section>
+
+          <!-- Cookies -->
+          <motion.section client:load {...fadeInLeft} className="space-y-4 md:mt-0 md:col-start-1 md:row-start-4">
+            <h2 class="text-3xl font-bold text-accent mb-4">7. Cookies & Tracking Technologies</h2>
+            <p class="text-muted">
+              We use cookies to improve your experience. You can disable cookies in your browser settings, but some features of the website may not function properly.
+            </p>
+          </motion.section>
+
+          <!-- Changes to Policy -->
+          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-4">
+            <h2 class="text-3xl font-bold text-accent mb-4">8. Changes to This Privacy Policy</h2>
+            <p class="text-muted">
+              We may update this Privacy Policy periodically. Any changes will be posted on this page, and we encourage you to review it regularly.
+            </p>
+          </motion.section>
+        </motion.div>
+      </div>
+    </motion.div>
+  </motion.section>
+  <Footer client:load />
+</BaseLayout>

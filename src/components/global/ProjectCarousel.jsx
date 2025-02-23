@@ -28,10 +28,10 @@ export const ProjectCarousel = ({ projects }) => {
               className="rounded-3xl mb-6 w-full h-48 object-cover"
               loading="lazy" decoding="async"
             />
-            <h3 className="mb-4 text-2xl font-bold font-heading text-primaryText">
+            <h3 className="mb-4 text-2xl font-bold font-heading text-primary">
               {projects[currentIndex].data.title}
             </h3>
-            <p className="text-secondaryText leading-loose mb-4">
+            <p className="text-secondary-background leading-loose mb-4">
               {projects[currentIndex].data.description}
             </p>
           </a>

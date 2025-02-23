@@ -26,6 +26,7 @@ export const ProjectCarousel = ({ projects }) => {
               src={projects[currentIndex].data.image}
               alt={projects[currentIndex].data.title}
               className="rounded-3xl mb-6 w-full h-48 object-cover"
+              loading="lazy" decoding="async"
             />
             <h3 className="mb-4 text-2xl font-bold font-heading text-primaryText">
               {projects[currentIndex].data.title}

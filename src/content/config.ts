@@ -5,6 +5,7 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       status: z.string(),
+      url: z.string(),
       path: z.string(),
       description: z.string(),
       image: z.string(),

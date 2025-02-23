@@ -1,6 +1,7 @@
 ---
 title: "AI Chatbot"
 path: "ai-chatbot" 
+url: "https://github.com/novadevseu/ai-chatbot"
 description: "A chatbot powered by OpenAI."
 status: "In Progress"
 image: "../../assets/images/ai-chatbot.png"

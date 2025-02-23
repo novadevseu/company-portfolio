@@ -1,42 +1,59 @@
 ---
 title: "Nova Devs Blog"
 path: "blog"
-description: "An open-source blogging platform built with Next.js, Firebase, and Tailwind CSS."
-status: "In Progress"
-image: "/images/projects/blog-platform.png"
-date: "2024-02-10"
-tech: ["Next.js", "Firebase", "Tailwind CSS", "Markdown"]
+status: In Progress
+url: "https://github.com/novadevseu/blog-nova-devs"
+image: "/src/assets/images/projects/blog-platform.png"
+date: "2025.02.23"
+tech:
+    - Next.js
+    - Firebase
+    - Tailwind CSS
+    - Markdown
+description: "An open-source blogging platform built with Next.js, Firebase, and Tailwind CSS, designed to provide a seamless experience for content creators and developers"
 ---
 
-## Overview
+## What is Nova Devs Blog?
 
-This is an Open Source blogging platform built with **Next.js, Firebase, and Tailwind CSS**. **Nova Devs** has designed this project to offer an intuitive and efficient way to create, edit, and manage articles with **Markdown**, including rich formatting.
+> Nova Devs Blog is an **open-source** platform built to empower developers and content creators by providing a seamless experience in writing, managing, and publishing articles.
+
+This project is designed to offer an intuitive way to create, edit, and manage articles using **Markdown**, including rich formatting. The focus is on making content creation as easy and efficient as possible while keeping the experience highly customizable.
+
+### Our Objectives
+
+> Our goal is to create a community-driven blogging platform that is accessible, feature-rich, and developer-friendly.
+
+The **Nova Devs Blog** is built with **Next.js, Firebase, and Tailwind CSS**, ensuring a fast and responsive experience. This project aims to promote **open-source contributions**, encourage **collaborative content creation**, and showcase **innovative web technologies**.
+
+We also want to ensure that blogging is **accessible to all**, allowing developers, designers, and writers to share insights, tutorials, and industry trends.
+
+#### Why Nova Devs Blog?
+
+> The best platform for developers to **share knowledge, collaborate, and engage with the community**.
+
+Nova Devs Blog is designed to **bridge the gap** between content creation and **modern development workflows**, making it easy for users to contribute articles, discuss trends, and share knowledge with the world.
 
 ---
 
 ## Features
 
-- **User Authentication**: Sign up, log in, and manage accounts with **Firebase Authentication**.
-- **Article Management**: Create, edit, update, and delete blog posts effortlessly.
-- **Markdown Support**: Render **Markdown files dynamically** for easy content formatting.
-- **Comment System**: Users can comment on posts with their username and profile picture.
-- **Upvotes & Downvotes**: Engage with comments through an interactive voting system.
-- **Search & Filtering**: Find articles quickly using advanced search and filtering options.
-- **Fully Customizable**: Open-source project, so anyone can use, modify, and extend it.
-- **Newsletter & Notifications**: Users can subscribe to receive updates on new posts and community highlights.
+- **User Authentication**: Secure login and account management using **Firebase Authentication**.
 
----
+- **Markdown Support**: Dynamic rendering of **Markdown files** with rich formatting.
 
-## Objectives
+- **Article Management**: Easily create, edit, update, and delete blog posts.
 
-Nova Devs Blog was created with the vision of developing an **accessible, feature-rich blogging platform** that leverages the best technologies in the industry. Our goals include:
+- **Comment System**: Users can leave comments with their **profile picture and username**.
 
-- **Empowering content creators** by providing a seamless **Markdown-based editing experience**.  
-- **Promoting Open Source** to encourage **community-driven enhancements** and feature expansions.  
-- **Showcasing our team's capabilities** while contributing to the **developer ecosystem**.  
-- **Creating a highly interactive platform** with robust authentication, comments, and engagement tools.  
-- **Building a community-driven blog** where we and our users can contribute articles on topics like **technology, AI, and current trends**.  
-- **Using this platform as our primary content hub**: **Nova Devs** will actively use this blog to **publish articles, share insights, and foster engagement** within the tech community.  
+- **Upvotes & Downvotes**: Interactive voting system to engage with content.
+
+- **Search & Filtering**: Find articles quickly with **advanced search capabilities**.
+
+- **Fully Customizable**: Open-source platform, allowing developers to extend functionality.
+
+- **Newsletter & Notifications**: Users can subscribe to receive updates on new posts.
+
+- **Performance Optimized**: Built with Next.js, ensuring **fast loading times** and great UX.
 
 ---
 
@@ -44,13 +61,14 @@ Nova Devs Blog was created with the vision of developing an **accessible, featur
 
 We have an **exciting roadmap** planned for **Nova Devs Blog**, including:
 
-- **Advanced analytics dashboard**: Insights on article views, interactions, and engagement.  
-- **Scheduled posts & drafts**: Allowing users to **plan their content** in advance.  
-- **Multi-language support**: Making the platform more **accessible** to a global audience.  
-- **Better article formats**: Support for **rich media like embedded videos** and improved layouts.  
-- **Community engagement features**: More interaction tools such as **discussion threads and collaborative articles**.  
-- **Advertising support**: Monetization opportunities through an **ad system** to sustain the platform.  
+- **Advanced analytics dashboard**: Insights into article views, interactions, and engagement.  
 
----
+- **Scheduled posts & drafts**: Allowing users to **plan and save their content** before publishing.  
 
-This blog is **just the beginning**. Stay tuned for updates as **Nova Devs** continues to improve and expand the platform.
+- **Multi-language support**: Expanding the platform to a **global audience**.  
+
+- **Better article formats**: Enhanced layouts and support for **rich media** (videos, code snippets, and interactive content).
+
+- **Community engagement features**: Discussion threads, collaborative articles, and social integrations.  
+
+- **Advertising & Monetization**: Enabling creators to earn through **sponsored content and ads**.

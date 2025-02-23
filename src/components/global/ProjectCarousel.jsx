@@ -39,13 +39,13 @@ export const ProjectCarousel = ({ projects }) => {
 
       {/* Botones Prev y Next */}
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background text-white p-2 rounded-full shadow-md hover:bg-accent transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer bg-background text-white p-2 rounded-full shadow-md hover:bg-accent transition"
         onClick={prevSlide}
       >
         ◀
       </button>
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background text-white p-2 rounded-full shadow-md hover:bg-accent transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer bg-background text-white p-2 rounded-full shadow-md hover:bg-accent transition"
         onClick={nextSlide}
       >
         ▶

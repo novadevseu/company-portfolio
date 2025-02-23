@@ -18,7 +18,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
     viewport={{ once: true }}
   >
     <motion.div client:load className="2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px]" {...fadeInUp}>
-      <div class="container gap-4 px-6 sm:px-12">
+      <div class="container gap-6 px-6 sm:px-12">
         <motion.h1 client:load className="text-4xl sm:text-5xl font-bold text-primary mb-8" {...fadeInUp}>
           Privacy Policy
         </motion.h1>
@@ -27,9 +27,12 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           Last Updated: February 2025
         </motion.p>
 
-        <motion.div client:load className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-12">
+        <motion.div 
+          client:load 
+          className="space-y-14 md:space-y-0 md:grid md:grid-cols-2 md:gap-12"
+        >
           <!-- Introduction -->
-          <motion.section client:load {...fadeInLeft}>
+          <motion.section client:load {...fadeInLeft} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">1. Introduction</h2>
             <p class="text-muted">
               At Nova Devs, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our website and services.
@@ -37,7 +40,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- Information Collection -->
-          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-1">
+          <motion.section client:load {...fadeInRight} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">2. Information We Collect</h2>
             <p class="text-muted">
               We collect the following types of information:
@@ -50,7 +53,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- How We Use Information -->
-          <motion.section client:load {...fadeInLeft} className="space-y-4 md:mt-0 md:col-start-1 md:row-start-2">
+          <motion.section client:load {...fadeInLeft} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">3. How We Use Your Information</h2>
             <p class="text-muted">
               We use the collected data for:
@@ -64,7 +67,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- Sharing Data -->
-          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-2">
+          <motion.section client:load {...fadeInRight} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">4. Data Sharing & Third Parties</h2>
             <p class="text-muted">
               We do not sell or trade your personal data. However, we may share information with:
@@ -76,7 +79,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- Security -->
-          <motion.section client:load {...fadeInLeft} className="space-y-4 md:mt-0 md:col-start-1 md:row-start-3">
+          <motion.section client:load {...fadeInLeft} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">5. Security Measures</h2>
             <p class="text-muted">
               We implement strong security measures to protect your personal data from unauthorized access, alteration, or destruction. However, no method of transmission over the internet is 100% secure.
@@ -84,7 +87,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- Your Rights -->
-          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-3">
+          <motion.section client:load {...fadeInRight} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">6. Your Rights & Control</h2>
             <p class="text-muted">
               You have the right to:
@@ -97,7 +100,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- Cookies -->
-          <motion.section client:load {...fadeInLeft} className="space-y-4 md:mt-0 md:col-start-1 md:row-start-4">
+          <motion.section client:load {...fadeInLeft} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">7. Cookies & Tracking Technologies</h2>
             <p class="text-muted">
               We use cookies to improve your experience. You can disable cookies in your browser settings, but some features of the website may not function properly.
@@ -105,7 +108,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
           </motion.section>
 
           <!-- Changes to Policy -->
-          <motion.section client:load {...fadeInRight} className="space-y-4 md:mt-0 md:col-start-2 md:row-start-4">
+          <motion.section client:load {...fadeInRight} className="mb-12 md:mb-0">
             <h2 class="text-3xl font-bold text-accent mb-4">8. Changes to This Privacy Policy</h2>
             <p class="text-muted">
               We may update this Privacy Policy periodically. Any changes will be posted on this page, and we encourage you to review it regularly.

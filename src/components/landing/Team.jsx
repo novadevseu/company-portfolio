@@ -1,6 +1,24 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import team from "../../content/team.json"; // Importa el JSON con los datos del equipo
+import team from "../../content/team.json";
+
+// Importar imágenes manualmente
+import cesarImg from "../../assets/images/team/cesar.jpg";
+import ivanImg from "../../assets/images/team/ivan.jpg";
+import denizImg from "../../assets/images/team/deniz.jpg";
+import markusImg from "../../assets/images/team/markus.jpg";
+import aliImg from "../../assets/images/team/ali.jpg";
+import joaoImg from "../../assets/images/team/joao.jpg";
+
+// Mapeo de imágenes a los miembros del equipo
+const teamImages = {
+  "Cesar A. Suárez Orizondo": cesarImg,
+  "Ivan López": ivanImg,
+  "Deniz Yetim": denizImg,
+  "Markus Abramian Medina": markusImg,
+  "Ali Gencay": aliImg,
+  "Joao Pedro Lima Dias": joaoImg,
+};
 
 export const Team = () => {
   const [activeMember, setActiveMember] = useState(0);
@@ -42,7 +60,7 @@ export const Team = () => {
             className="w-56 h-56 rounded-full overflow-hidden shadow-lg shadow-highlight"
           >
             <img
-              src={team[activeMember].image}
+              src={teamImages[team[activeMember].name].src} // Cargar imagen desde el objeto
               alt={`${team[activeMember].name} profile`}
               className="w-full h-full object-cover"
             />
@@ -102,7 +120,7 @@ export const Team = () => {
             }`}
           >
             <img
-              src={member.image}
+              src={teamImages[member.name]?.src} // Cargar imagen desde el objeto
               alt={`${member.name} profile`}
               className="w-full h-full object-cover"
             />

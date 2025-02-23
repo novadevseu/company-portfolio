@@ -1,44 +1,37 @@
 ---
-import { getCollection } from 'astro:content';
-import { motion } from 'framer-motion';
+import { getCollection } from "astro:content";
+import { fadeInUp } from "../../utils/animations";
+import { ProjectCarousel } from "../global/ProjectCarousel";
+import { motion } from "framer-motion";
 
-const projects = await getCollection("work");
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 50 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6, ease: "easeOut" },
-};
-
-const fadeInLeft = {
-  initial: { opacity: 0, x: -50 },
-  whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-};
-
-const fadeInRight = {
-  initial: { opacity: 0, x: 50 },
-  whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-};
+const projects = (await getCollection("work")).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
 ---
 
 <motion.section
   client:load
   id="projects"
-  className="w-screen flex justify-center items-center relative py-32"
+  className="w-screen flex justify-center items-center relative py-24 px-6 bg-background text-secondary-background"
   {...fadeInUp}
 >
-  <div class="absolute -top-16" />
-  <motion.div client:load className="pb-0 pt-4 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px]" {...fadeInUp}>
-
+  <motion.div
+    client:load
+    className="pb-0 pt-4 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] relative"
+    {...fadeInUp}
+  >
     <motion.div client:load className="container px-4 mb-20" {...fadeInUp}>
-      <motion.div client:load className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0" {...fadeInUp}>
-        <h3 class="text-accent text-xl sm:text-2xl mb-6 font-bold">Our Projects</h3>
-        <h2 class="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
+      <motion.div
+        client:load
+        className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0"
+        {...fadeInUp}
+      >
+        <h3 class="text-accent text-xl sm:text-2xl mb-6 font-bold">
+          Our Projects
+        </h3>
+        <h2
+          class="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white"
+        >
           Check out our <span class="text-accent">work</span>
         </h2>
         <p class="mb-6 text-lg text-muted">
@@ -46,70 +39,8 @@ const fadeInRight = {
         </p>
       </motion.div>
 
-      <motion.div client:load className="flex flex-wrap -mx-4 items-start h-auto sm:h-[30rem] lg:h-[31rem] xl:h-[35rem]">
-        
-        <!-- Primer Proyecto Principal -->
-        <motion.div client:load
-          className="flex sm:hidden lg:flex w-11/12 mx-auto sm:ml-0 sm:mr-0 lg:w-1/2 xl:w-3/5 px-4 mb-8 lg:mb-0 h-full"
-          {...fadeInLeft}
-        >
-          <a href={`/projects/${projects[0].data.path}`} class="p-6 sm:p-10 bg-transparent shadow-lg shadow-highlight rounded-3xl h-full hover:shadow-xl hover:shadow-accent transition cursor-pointer">
-            <motion.img client:load
-              src={projects[0].data.image} 
-              alt={projects[0].data.title} 
-              className="rounded-3xl mb-6 w-full"
-              initial={{ scale: 0.9, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            />
-            <h3 class="mb-4 text-2xl font-bold font-heading text-primaryText">
-              {projects[0].data.title}
-            </h3>
-            <p class="text-secondaryText leading-loose">
-              {projects[0].data.description}
-            </p>
-          </a>
-        </motion.div>
-
-        <!-- Proyectos Restantes -->
-        <motion.div client:load
-          className="hidden sm:flex mx-auto lg:ml-0 lg:mr-0 w-11/12 sm:w-4/5 lg:w-1/2 xl:w-2/5 px-4 flex-col justify-between h-full"
-          {...fadeInRight}
-        >
-          {projects.slice(1).map((project, index) => (
-            <motion.a client:load
-              key={index}
-              href={`/projects/${project.data.path}`} 
-              className="flex gap-4 p-10 bg-transparent shadow-lg shadow-highlight rounded-3xl min-h-1/2 h-1/2 max-h-[47%] hover:shadow-xl hover:shadow-accent transition cursor-pointer w-full"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <div class="pt-2">
-                <h3 class="mb-4 text-xl font-bold font-heading text-primaryText">
-                  {project.data.title}
-                </h3>
-                <p class="text-secondaryText leading-loose">
-                  {project.data.description}
-                </p>
-              </div>
-              <motion.img client:load
-                src={project.data.image} 
-                alt={project.data.title} 
-                className="rounded-3xl mb-6 w-[9rem] h-[9rem] lg:w-auto lg:h-auto xl:w-full"
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              />
-            </motion.a>
-          ))}
-        </motion.div>
-        
-      </motion.div>
+      <!-- Aquí se carga el componente React -->
+      <ProjectCarousel client:load projects={projects} />
     </motion.div>
-
   </motion.div>
 </motion.section>

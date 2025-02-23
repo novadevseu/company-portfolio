@@ -1,10 +1,99 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { BaseNavbar } from "@/components/global/BaseNavbar";
+import { motion } from "framer-motion";
+import { Footer } from "@/components/global/Footer";
 
-import "../styles/global.css"
+import "../styles/global.css";
+import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
+
 ---
 
 <BaseLayout title="Nova Devs | Terms & Conditions">
   <BaseNavbar client:load />
+
+  <motion.section 
+    client:load 
+    className="w-screen flex justify-center py-24 px-6 bg-background text-secondary-background"
+    initial="initial"
+    whileInView="whileInView"
+    viewport={{ once: true }}
+  >
+    <motion.div client:load className="2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] space-y-16" {...fadeInUp}>
+      <div class="container px-6 sm:px-12">
+        
+        <motion.h1 client:load className="text-4xl sm:text-5xl font-bold text-primary mb-6 text-center" {...fadeInUp}>
+          Terms & Conditions
+        </motion.h1>
+        
+        <motion.p client:load className="text-lg text-muted mb-12 text-center" {...fadeInUp}>
+          Last Updated: February 2025
+        </motion.p>
+
+        <motion.div client:load className="space-y-16">
+          <!-- Introduction -->
+          <motion.section client:load className="p-6 p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">1. Introduction</h2>
+            <p class="text-muted">
+              These Terms & Conditions govern your use of Nova Devs' website and services. By accessing our platform, you agree to comply with these terms.
+            </p>
+          </motion.section>
+
+          <!-- User Responsibilities -->
+          <motion.section client:load className="p-6 p-6 space-y-6" {...fadeInRight}>
+            <h2 class="text-3xl font-bold text-accent">2. User Responsibilities</h2>
+            <p class="text-muted">
+              By using our services, you agree to:
+            </p>
+            <ul class="list-disc pl-6 text-muted space-y-2">
+              <li>Provide accurate and up-to-date information.</li>
+              <li>Not engage in fraudulent, abusive, or unlawful activities.</li>
+              <li>Respect the intellectual property rights of Nova Devs and third parties.</li>
+            </ul>
+          </motion.section>
+
+          <!-- Intellectual Property -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">3. Intellectual Property</h2>
+            <p class="text-muted">
+              All content, trademarks, logos, and materials on Nova Devs' platform are owned by Nova Devs and protected under copyright laws.
+            </p>
+          </motion.section>
+
+          <!-- Termination of Use -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInRight}>
+            <h2 class="text-3xl font-bold text-accent">4. Termination of Use</h2>
+            <p class="text-muted">
+              We reserve the right to suspend or terminate your access to our services if you violate these Terms & Conditions.
+            </p>
+          </motion.section>
+
+          <!-- Disclaimer -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">5. Disclaimer of Liability</h2>
+            <p class="text-muted">
+              Nova Devs provides services on an "as is" basis and makes no warranties regarding the accuracy, completeness, or reliability of the content.
+            </p>
+          </motion.section>
+
+          <!-- Changes to Terms -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInRight}>
+            <h2 class="text-3xl font-bold text-accent">6. Changes to These Terms</h2>
+            <p class="text-muted">
+              We may update these Terms & Conditions periodically. Any changes will be posted on this page, and continued use of our services constitutes acceptance of the updated terms.
+            </p>
+          </motion.section>
+
+          <!-- Governing Law -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">7. Governing Law</h2>
+            <p class="text-muted">
+              These terms are governed by the laws of the jurisdiction where Nova Devs operates. Any disputes will be resolved in the applicable courts.
+            </p>
+          </motion.section>        
+        </motion.div>
+      </div>
+    </motion.div>
+  </motion.section>
+  <Footer client:load />
 </BaseLayout>

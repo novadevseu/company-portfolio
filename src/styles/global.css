@@ -30,30 +30,3 @@
     font-family: InterVariable, sans-serif; /* Fuente variable si está disponible */
   }
 }
-
-/* -------------------------------- */
-/* TIPOGRAFÍA Y ESTILOS DE BLOQUES  */
-/* -------------------------------- */
-.block-title {
-  @apply text-3xl font-bold tracking-normal;
-}
-
-.block-big-title {
-  @apply text-4xl xl:text-5xl font-bold tracking-normal;
-}
-
-.block-subtitle {
-  @apply text-xs tracking-wider font-bold uppercase;
-}
-
-.content-title {
-  @apply text-lg font-bold tracking-normal;
-}
-
-.content-text-white {
-  @apply text-base leading-relaxed;
-}
-
-.content-text-gray {
-  @apply text-gray-400 text-base;
-}

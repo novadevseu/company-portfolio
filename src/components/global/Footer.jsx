@@ -123,7 +123,7 @@ export const Footer = () => {
                         }}
                       >
                         <a
-                          href={isNavigation ? `#${item.toLowerCase().replace(/\s+/g, "-")}` : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                          href={isNavigation ? `/#${item.toLowerCase().replace(/\s+/g, "-")}` : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
                           className="text-muted hover:border-b-2 hover:border-accent transition duration-300 ease-in-out"
                           aria-label={item}
                         >

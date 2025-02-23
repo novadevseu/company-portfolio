@@ -1,10 +1,148 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { BaseNavbar } from "@/components/global/BaseNavbar";
-
-import "../styles/global.css"
+import { motion } from "framer-motion";
+import { Footer } from "@/components/global/Footer";
+import "../styles/global.css";
+import { fadeInUp, fadeInLeft, fadeInRight } from "../utils/animations";
 ---
 
-<BaseLayout title="Nova Devs | Terms & Conditions">
+<BaseLayout title="Nova Devs | Cookie Policy">
   <BaseNavbar client:load />
+
+  <motion.section
+    client:load
+    className="w-screen flex justify-center py-24 px-6 bg-background text-secondary-background"
+    initial="initial"
+    whileInView="whileInView"
+    viewport={{ once: true }}
+  >
+    <motion.div
+      client:load
+      className="2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] space-y-16"
+      {...fadeInUp}
+    >
+      <div class="container px-6 sm:px-12">
+        <motion.h1
+          client:load
+          className="text-4xl sm:text-5xl font-bold text-primary mb-6 text-center"
+          {...fadeInUp}
+        >
+          Cookie Policy
+        </motion.h1>
+
+        <motion.p
+          client:load
+          className="text-lg text-muted mb-12 text-center"
+          {...fadeInUp}
+        >
+          Last Updated: February 2025
+        </motion.p>
+
+        <motion.div client:load className="space-y-16">
+          <!-- Introduction -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">1. Introduction</h2>
+            <p class="text-muted">
+              This Cookie Policy explains how Nova Devs uses cookies and similar
+              tracking technologies when you visit our website. By continuing to
+              browse, you agree to our use of cookies.
+            </p>
+          </motion.section>
+
+          <!-- What Are Cookies -->
+          <motion.section
+            client:load
+            className="p-6 space-y-6"
+            {...fadeInRight}
+          >
+            <h2 class="text-3xl font-bold text-accent">2. What Are Cookies?</h2>
+            <p class="text-muted">
+              Cookies are small text files stored on your device that help
+              improve website functionality, performance, and personalization.
+            </p>
+          </motion.section>
+
+          <!-- How We Use Cookies -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">
+              3. How We Use Cookies
+            </h2>
+            <p class="text-muted">Nova Devs uses cookies to:</p>
+            <ul class="list-disc pl-6 text-muted space-y-2">
+              <li>Enhance website security and functionality.</li>
+              <li>Analyze visitor interactions to improve user experience.</li>
+              <li>Provide personalized content and remember preferences.</li>
+            </ul>
+          </motion.section>
+
+          <!-- Types of Cookies -->
+          <motion.section
+            client:load
+            className="p-6 space-y-6"
+            {...fadeInRight}
+          >
+            <h2 class="text-3xl font-bold text-accent">
+              4. Types of Cookies We Use
+            </h2>
+            <p class="text-muted">
+              We use different types of cookies, including:
+            </p>
+            <ul class="list-disc pl-6 text-muted space-y-2">
+              <li>
+                <strong>Essential Cookies:</strong> Required for core website functionality.
+              </li>
+              <li>
+                <strong>Analytics Cookies:</strong> Help us understand how visitors
+                interact with our site.
+              </li>
+              <li>
+                <strong>Marketing Cookies:</strong> Used for personalized ads and
+                tracking conversions.
+              </li>
+            </ul>
+          </motion.section>
+
+          <!-- Managing Cookies -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">
+              5. Managing Your Cookie Preferences
+            </h2>
+            <p class="text-muted">
+              You can manage or disable cookies through your browser settings.
+              Please note that disabling certain cookies may impact website
+              functionality.
+            </p>
+          </motion.section>
+
+          <!-- Third-Party Cookies -->
+          <motion.section
+            client:load
+            className="p-6 space-y-6"
+            {...fadeInRight}
+          >
+            <h2 class="text-3xl font-bold text-accent">
+              6. Third-Party Cookies
+            </h2>
+            <p class="text-muted">
+              Some third-party services we use (e.g., Google Analytics, social
+              media widgets) may place their own cookies on your device.
+            </p>
+          </motion.section>
+
+          <!-- Updates to Policy -->
+          <motion.section client:load className="p-6 space-y-6" {...fadeInLeft}>
+            <h2 class="text-3xl font-bold text-accent">
+              7. Updates to This Policy
+            </h2>
+            <p class="text-muted">
+              We may update this Cookie Policy periodically. Any changes will be
+              reflected on this page.
+            </p>
+          </motion.section>      
+        </motion.div>
+      </div>
+    </motion.div>
+  </motion.section>
+  <Footer client:load />
 </BaseLayout>

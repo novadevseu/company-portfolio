@@ -17,6 +17,8 @@ import { SEO } from "astro-seo";
 import { ClientRouter } from "astro:transitions";
 import { Navbar } from "@/components/global/Navbar";
 import { Footer } from "@/components/global/Footer";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Propiedades con valores por defecto para SEO
 const { 
@@ -79,6 +81,9 @@ const {
 
     <!-- Footer -->
     <Footer client:load />
+
+    <Analytics />
+    <SpeedInsights />
 
     <style is:global>
       html {

@@ -7,6 +7,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  
+  site: 'https://nova-devs.org',
   integrations: [sitemap(), react()]
 });

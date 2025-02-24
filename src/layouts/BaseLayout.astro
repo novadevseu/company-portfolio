@@ -8,34 +8,75 @@ import "@fontsource/inter/900.css";
 
 export interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  url?: string;
 }
 
-import { ClientRouter } from 'astro:transitions';
-const { title } = Astro.props;
+import { SEO } from "astro-seo";
+import { ClientRouter } from "astro:transitions";
+
+// Propiedades con valores por defecto para SEO
+const { 
+  title = "Nova Devs - Web Development Platform", 
+  description = "Custom web and cross-platform application development for international clients.", 
+  image = "/default-image.png",
+  url = "https://novadevs.com"
+} = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Nova Devs - Web Development Platform - Custom web and cross-platform application development for international clients."
+
+    <!-- SEO Meta Tags (Usando astro-seo) -->
+    <SEO 
+      title={title}
+      description={description}
+      canonical={url}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: image,
+          url: url
+        },
+        optional: {
+          description: description
+        }
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: title,
+        description: description,
+        image: image
+      }}
     />
-    <title>{title}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Sitemap para indexación -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Transiciones en navegación -->
     <ClientRouter />
   </head>
+
   <body>
+    <!-- Contenido principal -->
     <main aria-label="Main content">
       <slot />
     </main>
+
     <style is:global>
       html {
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         background-color: #26272b;
+        color: #ffffff;
         overflow-x: hidden;
         scroll-behavior: smooth !important;
       }

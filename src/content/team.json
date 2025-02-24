@@ -1,43 +1,43 @@
 [
   {
-    "name": "Ivan López",
-    "role": "Software Developer",
-    "image": "/src/assets/images/team/ivan.jpg",
-    "testimonial": "I am a software developer passionate about technology and continuous learning. Dedicated to collaborating with our international team to deliver impactful and innovative solutions.",
+    "name": "Iván López",
+    "role": "Full Stack Developer & Founder",
+    "image": "ivan.jpg",
+    "testimonial": "As software developers driven by technology and continuous learning, my colleagues and I founded Nova Devs to unite top talent and create innovative, high-impact projects with a global reach.",
     "linkedin": "https://www.linkedin.com/in/ivan-lopez-it/"
   },
   {
     "name": "Cesar A. Suárez Orizondo",
     "role": "Full Stack Developer",
-    "image": "/src/assets/images/team/cesar.jpg",
+    "image": "cesar.jpg",
     "testimonial": "As a software developer, I specialize in creating and optimizing web applications to meet client needs. With expertise in front-end and back-end development and software infrastructure, I deliver efficient and visually appealing solutions while contributing to team success.",
     "linkedin": "https://www.linkedin.com/in/c%C3%A9sar-aramis-su%C3%A1rez-orizondo/"
   },
   {
     "name": "Deniz Yetim",
     "role": "Software Engineer",
-    "image": "/src/assets/images/team/deniz.jpg",
+    "image": "deniz.jpg",
     "testimonial": "As a dedicated software engineering student, my focus is on creating a diverse portfolio of projects, particularly in web development.",
     "linkedin": "https://www.linkedin.com/in/denizyetim/"
   },
   {
     "name": "Markus Abramian Medina",
     "role": "Software Developer",
-    "image": "/src/assets/images/team/markus.jpg",
+    "image": "markus.jpg",
     "testimonial": "I am a Software Developer specialized in Full Stack web development. I am passionate about creating complete solutions.",
     "linkedin": "https://www.linkedin.com/in/markus-abramian-medina-1b0281273/"
   },
   {
     "name": "Ali Gencay",
     "role": "Software Engineer",
-    "image": "/src/assets/images/team/ali.jpg",
+    "image": "ali.jpg",
     "testimonial": "I’m a Software Engineering student passionate about Web Development, specializing in Frontend and Backend with React and Spring Boot.",
     "linkedin": "https://www.linkedin.com/in/ali-gencay-417aa3241/"
   },
   {
     "name": "Joao Pedro Lima Dias",
     "role": "Full Stack Developer",
-    "image": "/src/assets/images/team/joao.jpg",
+    "image": "joao.jpg",
     "testimonial": "I am a full stack developer with a strong focus on front-end development. I have a passion for creating visually appealing and user-friendly web applications.",
     "linkedin": "https://www.linkedin.com/in/joao-pedro-lima-dias-6021b9229/"
   }

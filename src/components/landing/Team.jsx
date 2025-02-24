@@ -2,24 +2,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import team from "../../content/team.json";
 
-// Importar imágenes manualmente
-import cesarImg from "../../assets/images/team/cesar.jpg";
-import ivanImg from "../../assets/images/team/ivan.jpg";
-import denizImg from "../../assets/images/team/deniz.jpg";
-import markusImg from "../../assets/images/team/markus.jpg";
-import aliImg from "../../assets/images/team/ali.jpg";
-import joaoImg from "../../assets/images/team/joao.jpg";
-
-// Mapeo de imágenes a los miembros del equipo
-const teamImages = {
-  "Cesar A. Suárez Orizondo": cesarImg,
-  "Ivan López": ivanImg,
-  "Deniz Yetim": denizImg,
-  "Markus Abramian Medina": markusImg,
-  "Ali Gencay": aliImg,
-  "Joao Pedro Lima Dias": joaoImg,
-};
-
 export const Team = () => {
   const [activeMember, setActiveMember] = useState(0);
 
@@ -27,9 +9,10 @@ export const Team = () => {
     setActiveMember(index);
   };
 
+  const getImageUrl = (imageName) => `/images/team/${imageName}`;
+
   return (
     <section className="relative w-full flex flex-col items-center justify-center py-32" id="team">
-      
       {/* Título Principal */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -60,7 +43,7 @@ export const Team = () => {
             className="w-56 h-56 rounded-full overflow-hidden shadow-lg shadow-highlight"
           >
             <img
-              src={teamImages[team[activeMember].name].src} // Cargar imagen desde el objeto
+              src={getImageUrl(team[activeMember].image)}
               alt={`${team[activeMember].name} profile`}
               className="w-full h-full object-cover"
             />
@@ -84,7 +67,6 @@ export const Team = () => {
               <p className="text-xl text-muted max-w-3xl leading-relaxed">
                 {team[activeMember].testimonial}
               </p>
-              
               {/* LinkedIn */}
               <a
                 href={team[activeMember].linkedin}
@@ -120,7 +102,7 @@ export const Team = () => {
             }`}
           >
             <img
-              src={teamImages[member.name]?.src} // Cargar imagen desde el objeto
+              src={getImageUrl(member.image)}
               alt={`${member.name} profile`}
               className="w-full h-full object-cover"
             />

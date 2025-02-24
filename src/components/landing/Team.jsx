@@ -13,7 +13,7 @@ import joaoImg from "../../assets/images/team/joao.jpg";
 // Mapeo de imágenes a los miembros del equipo
 const teamImages = {
   "Cesar A. Suárez Orizondo": cesarImg,
-  "Ivan López": ivanImg,
+  "Iván López": ivanImg,
   "Deniz Yetim": denizImg,
   "Markus Abramian Medina": markusImg,
   "Ali Gencay": aliImg,

@@ -1,6 +1,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Importar imágenes manualmente
+import blogImg from "../../assets/images/projects/blog-platform.png";
+import chatbotImg from "../../assets/images/projects/ai-chatbot.png";
+
+// Mapeo de imágenes a los proyectos
+const projectImages = {
+  "Nova Devs Blog": blogImg,
+  "AI Chatbot": chatbotImg
+};
+
 export const ProjectCarousel = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalProjects = projects.length;
@@ -23,10 +33,11 @@ export const ProjectCarousel = ({ projects }) => {
         >
           <a href={`/work/${projects[currentIndex].data.path}`}>
             <img
-              src={projects[currentIndex].data.image}
+              src={projectImages[projects[currentIndex].data.title].src} // Cargar imagen desde el objeto
               alt={projects[currentIndex].data.title}
               className="rounded-3xl mb-6 w-full h-48 object-cover"
-              loading="lazy" decoding="async"
+              loading="lazy"
+              decoding="async"
             />
             <h3 className="mb-4 text-2xl font-bold font-heading text-primary">
               {projects[currentIndex].data.title}

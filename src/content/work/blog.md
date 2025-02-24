@@ -3,7 +3,7 @@ title: "Nova Devs Blog"
 path: "blog"
 status: In Progress
 url: "https://github.com/novadevseu/blog-nova-devs"
-image: "/src/assets/images/projects/blog-platform.png"
+image: "blog-platform.png"
 date: "2025.02.23"
 tech:
     - Next.js

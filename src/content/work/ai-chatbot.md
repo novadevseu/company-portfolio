@@ -4,7 +4,7 @@ path: "ai-chatbot"
 status: In Progress
 date: 2025.02.23
 url: "https://github.com/novadevseu/ai-chatbot-nova-devs"
-image: "/src/assets/images/projects/ai-chatbot.png"
+image: "ai-chatbot.png"
 tech:
   - Python
   - FastAPI

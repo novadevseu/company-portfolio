@@ -8,6 +8,16 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { BaseNavbar } from "@/components/global/BaseNavbar";
 import { Footer } from "@/components/global/Footer";
 
+// Importar imágenes manualmente
+import blogImg from "../../assets/images/projects/blog-platform.png";
+import chatbotImg from "../../assets/images/projects/ai-chatbot.png";
+
+// Mapeo de imágenes a los proyectos
+const projectImages = {
+  "Nova Devs Blog": blogImg,
+  "AI Chatbot": chatbotImg,
+};
+
 interface Props {
   project: CollectionEntry<"work">;
 }
@@ -27,7 +37,7 @@ const { Content } = await project.render();
 <BaseLayout title={project.data.title}>
   <BaseNavbar client:load />
   <section class="w-full py-16 pt-32 sm:pt-40 md:py-24 md:pt-32 lg:pt-40 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-background text-secondary-background">
-    <div class="container  mx-auto px-6 lg:px-12 xl:px-20">
+    <div class="container mx-auto px-6 lg:px-12 xl:px-20">
       
       <!-- Título del Proyecto -->
       <motion.h1 
@@ -44,13 +54,13 @@ const { Content } = await project.render();
         className="text-lg sm:text-xl md:text-xl text-secondary-background mb-6"
         {...fadeInUp}
       >
-       {project.data.status}
+        {project.data.status}
       </motion.p>
 
       <!-- Imagen del Proyecto -->
       <motion.img 
         client:load
-        src={project.data.image}
+        src={projectImages[project.data.title].src}
         alt={project.data.title}
         className="w-1/2 mx-auto rounded-xl shadow-lg shadow-highlight mb-6"
         {...fadeInUp}

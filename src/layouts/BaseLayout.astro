@@ -15,6 +15,8 @@ export interface Props {
 
 import { SEO } from "astro-seo";
 import { ClientRouter } from "astro:transitions";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Propiedades con valores por defecto para SEO
 const { 
@@ -71,6 +73,8 @@ const {
     <main aria-label="Main content">
       <slot />
     </main>
+    <Analytics />
+    <SpeedInsights />
 
     <style is:global>
       html {

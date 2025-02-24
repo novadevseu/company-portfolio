@@ -124,7 +124,7 @@ const FAQBox = ({ title, content }) => {
       <div className="flex justify-between items-center">
         <h3 className="text-2xl font-bold text-white">{title}</h3>
         <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
+          animate={{ rotate: isOpen ? 0 : 180 }}
           transition={{ duration: 0.3 }}
         >
           <svg

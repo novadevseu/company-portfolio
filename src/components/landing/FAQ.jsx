@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ContactModal } from "../../components/global/ContactModal";
 
 const FAQData = [
   {
-    question: "How can I work with Nova Devs?",
-    answer: (
+    question: "How can I hire Nova Devs for a project?",
+    answer: ({ openModal }) => (
       <>
-        We work exclusively through{" "}
+        You can hire us in two ways:  
+        <br />
+        - Through{" "}
         <a
           href="https://www.upwork.com/agencies/1864021705604676426/"
           className="text-green-500 underline hover:text-green-600 transition"
@@ -14,13 +17,22 @@ const FAQData = [
           rel="noopener noreferrer"
         >
           Upwork
-        </a>
-        , ensuring secure contracts and transparent collaborations.
+        </a>{" "}
+        for secure contracts and transparent collaborations.  
+        <br />
+        - Or{" "}
+        <button
+          onClick={openModal}
+          className="text-blue-500 underline hover:text-blue-600 transition cursor-pointer"
+        >
+          contact us directly
+        </button>{" "}
+        to discuss a custom agreement.
       </>
     ),
   },
   {
-    question: "Can I communicate with you in my language?",
+    question: "Do you support communication in different languages?",
     answer:
       "Absolutely! Our team can communicate fluently in Spanish, English, Croatian, and Turkish, ensuring seamless collaboration regardless of your language.",
   },
@@ -30,10 +42,10 @@ const FAQData = [
       "You don’t need anything specific, as we handle everything. However, having initial requirements or designs ready can help accelerate the process.",
   },
   {
-    question: "Can I join your team?",
+    question: "How can I become part of your team?",
     answer: (
       <>
-        Yes! We are always looking for talented individuals. Contact us via{" "}
+        We are always looking for talented individuals. Contact us via{" "}
         <a
           href="https://www.linkedin.com/company/nova-devs-eu/"
           className="text-blue-600 underline hover:text-blue-800 transition"
@@ -47,46 +59,59 @@ const FAQData = [
     ),
   },
   {
-    question: "What's your refund policy?",
+    question: "How does the payment and delivery process work?",
     answer:
-      "We offer a 30-day money-back guarantee on all our plans. If you're not satisfied, simply contact our support team within 30 days for a full refund.",
+      "Projects are structured into clear deliverables, allowing clients to track progress within a set timeline. Payments can be made per milestone or for the full project. Two final review phases ensure client satisfaction before completion.",
   },
   {
-    question: "How to get support for the project?",
+    question: "How can I get support for my project?",
     answer:
-      "Our dedicated support team is here to help. You can reach out to us through the contact form on our website, send an email, or engage via live chat.",
+      "Our support team is ready to assist you. You can contact us via our website's contact form, email us directly, or reach out through live chat for quick assistance.",
   },
 ];
 
-export const FAQ = () => (
-  <section id="FAQ" className="relative py-24 bg-background text-muted">
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="w-11/12 md:w-4/5 lg:w-3/5 mx-auto"
-    >
-      {/* Título */}
-      <div className="text-center mb-16">
-        <h2 className="text-5xl font-bold text-accent mb-6">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-xl">
-          Explore common questions about how we work and communicate with
-          clients.
-        </p>
-      </div>
+export const FAQ = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-      {/* Preguntas Frecuentes */}
-      <div className="flex flex-col gap-6">
-        {FAQData.map((item, index) => (
-          <FAQBox key={index} title={item.question} content={item.answer} />
-        ))}
-      </div>
-    </motion.div>
-  </section>
-);
+  return (
+    <>
+      <section id="FAQ" className="relative py-24 bg-background text-muted">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-11/12 md:w-4/5 lg:w-3/5 mx-auto"
+        >
+          {/* Título */}
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-accent mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl">
+              Explore common questions about how we work and communicate with
+              clients.
+            </p>
+          </div>
+
+          {/* Preguntas Frecuentes */}
+          <div className="flex flex-col gap-6">
+            {FAQData.map((item, index) => (
+              <FAQBox
+                key={index}
+                title={item.question}
+                content={typeof item.answer === "function" ? item.answer({ openModal: () => setIsModalOpen(true) }) : item.answer}
+              />
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Modal de Contacto */}
+      {isModalOpen && <ContactModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />}
+    </>
+  );
+};
 
 const FAQBox = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);

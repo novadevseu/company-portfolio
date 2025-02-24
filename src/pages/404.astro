@@ -5,18 +5,18 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Nova Devs | 404 Not Found">
-  <div class="bg-background text-secondary-background flex items-center justify-center min-h-screen">
+  <div class="bg-background text-secondary-background flex items-center justify-center min-h-screen p-4">
     <motion.div client:load
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="text-center w-1/2 p-8 rounded-md shadow-md shadow-highlight bg-highlight"
+      className="text-center w-full max-w-md p-6 rounded-md shadow-md shadow-highlight bg-highlight"
     >
       <motion.h1 client:load
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-9xl font-bold text-primary mb-4"
+        className="text-6xl sm:text-9xl font-bold text-primary mb-4"
       >
         4 <span class="text-accent">0</span> <span class="text-secondary-background">4</span>
       </motion.h1>
@@ -25,7 +25,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="text-3xl text-muted mb-8"
+        className="text-xl sm:text-3xl text-muted mb-8"
       >
         Lo sentimos, la página que buscas <span class="text-accent">no existe</span>.
       </motion.h3>
@@ -36,10 +36,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         animate={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.1, backgroundColor: "var(--color-primary)" }}
         transition={{ duration: 0.3 }}
-        className="bg-accent text-secondary-background px-8 py-4 rounded-md hover:bg-primary hover:box-shadow font-bold text-lg transition duration-300"
+        className="bg-accent text-secondary-background px-6 py-3 rounded-md hover:bg-primary hover:box-shadow font-bold text-lg transition duration-300"
       >
         Volver al inicio
       </motion.a>
     </motion.div>
   </div>
 </BaseLayout>
+

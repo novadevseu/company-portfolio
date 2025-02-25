@@ -25,10 +25,10 @@ export const ProjectCarousel = ({ projects }) => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 15 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0, x: -15 }}
+          transition={{ duration: 0.3 }}
           className="w-full max-w-4xl p-6 sm:p-10 bg-background border border-highlight shadow-lg hover:shadow-xl hover:shadow-highlight transition duration-300 ease-in-out cursor-pointer rounded-3xl flex flex-col items-center justify-center text-center"
         >
           <a href={`/work/${projects[currentIndex].data.path}`}>

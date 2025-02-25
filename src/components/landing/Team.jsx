@@ -21,7 +21,7 @@ export const Team = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-4/5 text-left mb-12"
       >
-        <h2 className="text-5xl font-bold text-accent">Our Team</h2>
+        <h2 className="text-3xl font-bold text-accent">Our Team</h2>
       </motion.div>
 
       {/* Contenedor Principal */}
@@ -63,8 +63,8 @@ export const Team = () => {
               <h3 className="text-5xl font-bold text-white mb-4">
                 {team[activeMember].name}
               </h3>
-              <p className="text-3xl text-accent mb-6">{team[activeMember].role}</p>
-              <p className="text-xl text-muted max-w-3xl leading-relaxed">
+              <p className="text-2xl text-accent mb-6">{team[activeMember].role}</p>
+              <p className="text-lg text-muted max-w-3xl leading-relaxed">
                 {team[activeMember].testimonial}
               </p>
               {/* LinkedIn */}
@@ -72,7 +72,7 @@ export const Team = () => {
                 href={team[activeMember].linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 mt-6 text-accent text-xl hover:text-white transition"
+                className="inline-flex items-center gap-4 mt-6 text-accent text-lg hover:text-white transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ export const Team = () => {
             onClick={() => handleMemberChange(index)}
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
-            className={`w-16 h-16 rounded-full overflow-hidden hover:shadow-lg hover:shadow-highlight transition-ease duration-300 ${
+            className={`w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden hover:shadow-lg hover:shadow-highlight transition-ease duration-300 ${
               activeMember === index ? "ring-2 ring-accent scale-125 shadow-lg shadow-highlight" : ""
             }`}
           >
